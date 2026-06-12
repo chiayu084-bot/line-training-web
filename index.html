@@ -7,18 +7,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 :root {
-  --green:#06C755; --green-dark:#05a547; --green-light:#e8faf0; --green-border:#b3eacc;
-  --gray-50:#f8f9fa; --gray-100:#f1f3f4; --gray-200:#e8eaed; --gray-400:#9aa0a6;
-  --gray-600:#5f6368; --gray-800:#3c4043; --gray-900:#202124;
-  --blue:#1a73e8; --blue-light:#e8f0fe;
-  --amber:#f9ab00; --amber-light:#fef7e0;
-  --red:#d93025; --red-light:#fce8e6;
-  --radius:10px; --radius-sm:6px;
+  --green:#06C755;--green-dark:#05a547;--green-light:#e8faf0;--green-border:#b3eacc;
+  --gray-50:#f8f9fa;--gray-100:#f1f3f4;--gray-200:#e8eaed;--gray-400:#9aa0a6;
+  --gray-600:#5f6368;--gray-800:#3c4043;--gray-900:#202124;
+  --blue:#1a73e8;--blue-light:#e8f0fe;
+  --amber:#f9ab00;--amber-light:#fef7e0;
+  --red:#d93025;--red-light:#fce8e6;
+  --radius:10px;--radius-sm:6px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans-serif;background:var(--gray-50);color:var(--gray-900);font-size:15px;line-height:1.65;}
-
-/* LOGIN */
 .login-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;display:flex;align-items:center;justify-content:center;}
 .login-box{background:#fff;border-radius:16px;padding:36px 40px;width:360px;text-align:center;}
 .login-box .lb-logo{width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;color:#fff;}
@@ -28,10 +26,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans
 .login-box input:focus{border-color:var(--green);}
 .login-box button{width:100%;padding:11px;background:var(--green);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;}
 .login-box button:hover{background:var(--green-dark);}
-
-/* TOPBAR */
 .topbar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-200);display:flex;align-items:center;gap:16px;padding:0 24px;height:56px;}
-.topbar-logo{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;color:var(--gray-900);}
+.topbar-logo{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;}
 .logo-badge{background:var(--green);color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;}
 .topbar-nav{display:flex;gap:4px;margin-left:8px;flex:1;}
 .topbar-nav a{padding:6px 11px;border-radius:var(--radius-sm);text-decoration:none;font-size:13px;color:var(--gray-600);transition:background 0.15s;white-space:nowrap;}
@@ -39,8 +35,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans
 .topbar-nav a.active{font-weight:500;}
 .topbar-user{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-600);}
 .user-avatar{width:28px;height:28px;border-radius:50%;background:var(--green-light);color:var(--green-dark);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;}
-
-/* LAYOUT */
 .layout{display:flex;min-height:calc(100vh - 56px);}
 .sidebar{width:210px;flex-shrink:0;background:#fff;border-right:1px solid var(--gray-200);padding:16px 10px;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;}
 .sidebar-section{margin-bottom:20px;}
@@ -51,42 +45,49 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans
 .sidebar-item i{font-size:15px;}
 .sidebar-item .s-badge{margin-left:auto;font-size:11px;background:var(--green);color:#fff;border-radius:10px;padding:1px 6px;}
 .sidebar-item .s-check{margin-left:auto;color:var(--green);font-size:15px;}
-
+.sidebar-item.locked{opacity:0.45;pointer-events:none;}
 .main{flex:1;padding:24px 28px;max-width:880px;}
 .section{display:none;}
 .section.active{display:block;}
-
-/* HERO */
 .hero{background:linear-gradient(135deg,#06C755 0%,#05a547 100%);border-radius:16px;padding:28px 32px;color:#fff;margin-bottom:24px;}
 .hero h1{font-size:24px;font-weight:600;margin-bottom:6px;}
 .hero p{font-size:14px;opacity:0.9;max-width:520px;}
 .hero-chips{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
 .hero-chip{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:5px 13px;font-size:13px;cursor:pointer;transition:background 0.15s;}
 .hero-chip:hover{background:rgba(255,255,255,0.35);}
-
-/* PROGRESS */
 .progress-bar-wrap{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:14px;}
 .progress-label{font-size:13px;color:var(--gray-600);min-width:70px;}
 .progress-track{flex:1;height:8px;background:var(--gray-200);border-radius:4px;overflow:hidden;}
 .progress-fill{height:100%;background:var(--green);border-radius:4px;transition:width 0.4s ease;}
 .progress-pct{font-size:13px;font-weight:600;color:var(--green);min-width:36px;text-align:right;}
-
-/* CARDS */
 .card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:18px 22px;margin-bottom:14px;}
 .card-title{font-size:15px;font-weight:600;margin-bottom:11px;display:flex;align-items:center;gap:8px;}
 .card-title i{color:var(--green);font-size:19px;}
-
+/* SUMMARY BOX */
+.summary-box{background:linear-gradient(135deg,#e8faf0 0%,#d0f5e0 100%);border:1.5px solid var(--green-border);border-radius:12px;padding:16px 20px;margin-bottom:18px;}
+.summary-box .sb-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:14px;font-weight:600;color:var(--green-dark);}
+.summary-box .sb-header i{font-size:18px;}
+.summary-box .sb-body{font-size:13px;color:var(--gray-800);line-height:1.7;}
+.summary-box .sb-body strong{color:var(--green-dark);}
+/* PATH STEPPER */
+.path-stepper{display:flex;align-items:center;gap:6px;margin-bottom:20px;flex-wrap:wrap;}
+.path-step{display:flex;align-items:center;gap:4px;font-size:12px;padding:5px 10px;border-radius:20px;border:1px solid var(--gray-200);color:var(--gray-400);background:#fff;}
+.path-step.current{border-color:var(--green);color:var(--green-dark);background:var(--green-light);font-weight:600;}
+.path-step.done{border-color:var(--green-border);color:var(--green);background:var(--green-light);}
+.path-step.locked{opacity:0.5;}
+.path-arrow{color:var(--gray-400);font-size:12px;}
 /* MODULE CARDS */
 .module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:20px;}
 .module-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;position:relative;}
 .module-card:hover{border-color:var(--green);box-shadow:0 2px 8px rgba(6,199,85,0.1);}
 .module-card.done{border-color:var(--green-border);background:var(--green-light);}
+.module-card.locked{opacity:0.45;pointer-events:none;}
 .module-card .mc-icon{font-size:22px;margin-bottom:6px;}
 .module-card .mc-title{font-size:13px;font-weight:600;margin-bottom:3px;}
 .module-card .mc-desc{font-size:11px;color:var(--gray-600);}
 .module-card .mc-check{position:absolute;top:10px;right:10px;width:18px;height:18px;border-radius:50%;background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;}
 .module-card.done .mc-check{background:var(--green);}
-
+.module-card .mc-lock{position:absolute;top:10px;right:10px;font-size:14px;color:var(--gray-400);}
 /* FLOW */
 .flow-wrap{overflow-x:auto;padding:4px 0;}
 .flow-steps{display:flex;align-items:stretch;min-width:600px;}
@@ -100,8 +101,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans
 .flow-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 5px;}
 .flow-title{font-size:11px;font-weight:600;color:var(--gray-800);}
 .flow-sub{font-size:10px;color:var(--gray-400);margin-top:2px;}
-
-/* PARAM TABLES */
+/* TABLES */
 .param-table{width:100%;border-collapse:collapse;font-size:13px;}
 .param-table th{background:var(--gray-100);padding:7px 11px;text-align:left;font-size:12px;font-weight:600;color:var(--gray-600);border-bottom:1px solid var(--gray-200);}
 .param-table td{padding:7px 11px;border-bottom:1px solid var(--gray-100);vertical-align:top;}
@@ -112,8 +112,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans
 .tag-optional{background:var(--gray-100);color:var(--gray-600);}
 .tag-green{background:var(--green-light);color:#05a547;}
 code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'Courier New',monospace;font-size:12px;color:var(--gray-800);}
-
-/* CALLOUT */
 .callout{border-radius:var(--radius-sm);padding:11px 14px;margin:10px 0;font-size:13px;display:flex;gap:9px;}
 .callout-warn{background:var(--amber-light);border-left:3px solid var(--amber);}
 .callout-info{background:var(--blue-light);border-left:3px solid var(--blue);}
@@ -124,29 +122,31 @@ code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'C
 .callout-info i{color:var(--blue);}
 .callout-success i{color:var(--green);}
 .callout-error i{color:var(--red);}
-
-/* READ TOGGLE */
 .read-toggle{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:var(--radius-sm);cursor:pointer;font-size:14px;font-weight:500;color:#fff;border:none;background:var(--green);margin-top:16px;transition:background 0.15s;}
 .read-toggle:hover{background:var(--green-dark);}
 .read-toggle.done-btn{background:var(--gray-200);color:var(--gray-400);cursor:not-allowed;}
-
-/* TABS */
 .tab-row{display:flex;gap:4px;margin-bottom:14px;border-bottom:1px solid var(--gray-200);}
 .tab-btn{padding:7px 14px;font-size:13px;border:none;background:none;cursor:pointer;color:var(--gray-600);border-bottom:2px solid transparent;margin-bottom:-1px;}
 .tab-btn.active{color:var(--green);border-bottom-color:var(--green);font-weight:500;}
 .tab-content{display:none;}
 .tab-content.active{display:block;}
-
-/* HASH DEMO */
 .hash-demo{background:var(--gray-900);border-radius:var(--radius);padding:14px 18px;}
 .hash-demo code{background:transparent;color:#a8e6c0;font-size:12px;}
 .hash-demo .comment{color:#6a9e7a;}
-
-/* ERROR TABLE */
 .error-tag{display:inline-block;border-radius:4px;padding:1px 6px;font-size:11px;font-weight:600;}
 .error-tag-ok{background:var(--green-light);color:#05a547;}
 .error-tag-fail{background:var(--red-light);color:#c5221f;}
-
+/* HASH CALCULATOR */
+.hash-calc{background:#fff;border:2px solid var(--green-border);border-radius:12px;padding:20px;margin:16px 0;}
+.hash-calc h4{font-size:14px;font-weight:600;color:var(--green-dark);margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.hash-calc label{display:block;font-size:12px;font-weight:600;color:var(--gray-600);margin-bottom:3px;margin-top:10px;}
+.hash-calc input{width:100%;padding:8px 10px;border:1px solid var(--gray-200);border-radius:6px;font-size:13px;font-family:'Courier New',monospace;outline:none;}
+.hash-calc input:focus{border-color:var(--green);}
+.hash-calc .hc-result{background:var(--gray-900);border-radius:8px;padding:12px 14px;margin-top:12px;font-family:'Courier New',monospace;font-size:12px;color:#a8e6c0;word-break:break-all;}
+.hash-calc .hc-step{font-size:12px;color:var(--gray-600);margin-top:6px;padding:6px 10px;background:var(--gray-50);border-radius:6px;}
+.hash-calc .hc-step strong{color:var(--gray-800);}
+.hash-calc button{margin-top:12px;padding:8px 18px;background:var(--green);color:#fff;border:none;border-radius:6px;font-size:13px;cursor:pointer;}
+.hash-calc button:hover{background:var(--green-dark);}
 /* QUIZ */
 .quiz-wrap{margin-top:16px;border:2px solid var(--green-border);border-radius:var(--radius);overflow:hidden;background:#fff;}
 .quiz-header{background:var(--green-light);padding:13px 18px;display:flex;align-items:center;gap:9px;}
@@ -156,23 +156,23 @@ code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'C
 .quiz-q-block{}
 .quiz-q{font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:9px;line-height:1.5;}
 .quiz-q .q-num{color:var(--green);margin-right:4px;}
+.quiz-q .q-scenario{font-weight:400;font-size:13px;color:var(--gray-700);display:block;margin-top:4px;padding:8px 12px;background:var(--gray-50);border-radius:6px;border-left:3px solid var(--amber);}
 .quiz-options{display:flex;flex-direction:column;gap:6px;}
 .quiz-opt{display:flex;align-items:flex-start;gap:9px;padding:8px 13px;border:1px solid var(--gray-200);border-radius:8px;cursor:pointer;font-size:13px;background:#fff;transition:border-color 0.15s,background 0.15s;text-align:left;width:100%;}
 .quiz-opt:hover{border-color:var(--green);background:var(--green-light);}
 .quiz-opt.selected{border-color:var(--blue);background:var(--blue-light);}
 .quiz-opt.correct{border-color:var(--green);background:var(--green-light);pointer-events:none;}
 .quiz-opt.wrong{border-color:var(--red);background:var(--red-light);pointer-events:none;}
-.quiz-opt.reveal{border-color:var(--green);background:var(--green-light);pointer-events:none;opacity:0.75;}
 .quiz-opt .opt-icon{flex-shrink:0;font-size:14px;margin-top:1px;}
 .quiz-opt.correct .opt-icon{color:var(--green);}
 .quiz-opt.wrong .opt-icon{color:var(--red);}
-.quiz-opt.reveal .opt-icon{color:var(--green);}
-.quiz-feedback{font-size:12px;margin-top:5px;padding:5px 9px;border-radius:5px;display:none;}
+.quiz-feedback{font-size:12px;margin-top:5px;padding:8px 10px;border-radius:5px;display:none;line-height:1.5;}
 .quiz-feedback.show{display:block;}
 .quiz-feedback.ok{background:var(--green-light);color:#05a547;}
 .quiz-feedback.no{background:var(--red-light);color:#c5221f;}
+.quiz-feedback .fb-link{color:var(--blue);cursor:pointer;text-decoration:underline;font-weight:500;}
 .quiz-footer{padding:13px 18px;border-top:1px solid var(--gray-200);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.quiz-submit-btn{background:var(--green);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.15s;}
+.quiz-submit-btn{background:var(--green);color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:14px;font-weight:500;cursor:pointer;}
 .quiz-submit-btn:hover{background:var(--green-dark);}
 .quiz-submit-btn:disabled{background:var(--gray-200);color:var(--gray-400);cursor:not-allowed;}
 .quiz-retry-btn{background:#fff;color:var(--gray-700);border:1px solid var(--gray-200);border-radius:8px;padding:8px 20px;font-size:14px;cursor:pointer;}
@@ -182,7 +182,8 @@ code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'C
 .quiz-pass-banner i{font-size:26px;}
 .quiz-pass-banner .pb-title{font-size:15px;font-weight:600;}
 .quiz-pass-banner .pb-sub{font-size:12px;opacity:0.9;margin-top:2px;}
-
+.next-module-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:9px 18px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;}
+.next-module-btn:hover{background:#1557b0;}
 /* ADMIN */
 .admin-table{width:100%;border-collapse:collapse;font-size:13px;}
 .admin-table th{background:var(--gray-100);padding:8px 12px;text-align:left;font-size:12px;font-weight:600;color:var(--gray-600);border-bottom:1px solid var(--gray-200);}
@@ -191,7 +192,8 @@ code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'C
 .mod-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500;margin:1px;}
 .mod-done{background:var(--green-light);color:#05a547;}
 .mod-pending{background:var(--gray-100);color:var(--gray-600);}
-
+.admin-detail{font-size:12px;color:var(--gray-600);margin-top:4px;}
+.admin-detail .wrong-q{color:var(--red);font-weight:500;}
 /* AI CHAT */
 .chat-messages{min-height:180px;max-height:460px;overflow-y:auto;margin-bottom:10px;display:flex;flex-direction:column;gap:11px;padding:2px 0;}
 .msg{display:flex;gap:10px;max-width:700px;}
@@ -204,41 +206,33 @@ code{background:var(--gray-100);border-radius:3px;padding:1px 5px;font-family:'C
 .msg.user .msg-bubble{background:var(--blue);color:#fff;border-radius:11px 2px 11px 11px;}
 .chat-input-wrap{background:#fff;border:1px solid var(--gray-200);border-radius:11px;display:flex;align-items:flex-end;padding:7px 10px;gap:7px;}
 .chat-input{flex:1;border:none;outline:none;font-size:13px;resize:none;font-family:inherit;line-height:1.5;max-height:110px;min-height:22px;background:transparent;}
-.chat-send{width:33px;height:33px;border-radius:7px;border:none;cursor:pointer;background:var(--green);color:#fff;font-size:15px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background 0.15s;}
+.chat-send{width:33px;height:33px;border-radius:7px;border:none;cursor:pointer;background:var(--green);color:#fff;font-size:15px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .chat-send:hover{background:var(--green-dark);}
 .chat-send:disabled{background:var(--gray-200);color:var(--gray-400);cursor:not-allowed;}
 .quick-q{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
-.quick-btn{border:1px solid var(--gray-200);background:#fff;border-radius:20px;padding:4px 11px;font-size:11px;color:var(--gray-600);cursor:pointer;transition:border-color 0.15s;}
+.quick-btn{border:1px solid var(--gray-200);background:#fff;border-radius:20px;padding:4px 11px;font-size:11px;color:var(--gray-600);cursor:pointer;}
 .quick-btn:hover{border-color:var(--green);color:var(--green-dark);}
 .typing{display:flex;gap:4px;align-items:center;padding:2px 0;}
 .typing span{width:6px;height:6px;border-radius:50%;background:var(--gray-400);animation:bounce 1.2s infinite;}
 .typing span:nth-child(2){animation-delay:0.2s;}
 .typing span:nth-child(3){animation-delay:0.4s;}
 @keyframes bounce{0%,80%,100%{transform:scale(0.8);opacity:0.5;}40%{transform:scale(1.2);opacity:1;}}
-
 h2{font-size:19px;font-weight:600;margin-bottom:14px;}
 h3{font-size:15px;font-weight:600;margin-bottom:9px;margin-top:18px;}
 p{color:var(--gray-700);margin-bottom:9px;font-size:13px;}
-ul{padding-left:16px;margin-bottom:9px;}
-li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
-
 @media(max-width:768px){.sidebar{display:none;}.main{padding:14px;}}
 </style>
 </head>
 <body>
-
-<!-- Login Overlay -->
 <div class="login-overlay" id="login-overlay">
   <div class="login-box">
     <div class="lb-logo"><i class="ti ti-shopping-cart"></i></div>
     <h2>LINE 購物串接訓練</h2>
-    <p>請輸入你的姓名，系統會記錄你的學習進度</p>
+    <p>請輸入你的姓名，系統會記錄你的學習進度與答題結果</p>
     <input type="text" id="login-name" placeholder="例如：王小明" maxlength="20">
     <button onclick="doLogin()">開始學習</button>
   </div>
 </div>
-
-<!-- Topbar -->
 <header class="topbar">
   <div class="topbar-logo"><span class="logo-badge">LINE</span> 購物串接訓練</div>
   <nav class="topbar-nav">
@@ -251,22 +245,18 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
     <a href="#" onclick="showSection('ai',this)"><i class="ti ti-robot" style="font-size:13px;vertical-align:-1px;margin-right:2px"></i>AI 助理</a>
     <a href="#" onclick="showSection('admin',this)" id="admin-tab" style="display:none"><i class="ti ti-chart-bar" style="font-size:13px;vertical-align:-1px;margin-right:2px"></i>進度總覽</a>
   </nav>
-  <div class="topbar-user">
-    <div class="user-avatar" id="user-avatar">?</div>
-    <span id="user-name-display">-</span>
-  </div>
+  <div class="topbar-user"><div class="user-avatar" id="user-avatar">?</div><span id="user-name-display">-</span></div>
 </header>
-
 <div class="layout">
 <aside class="sidebar">
   <div class="sidebar-section">
-    <div class="sidebar-label">學習模組</div>
+    <div class="sidebar-label">學習路徑</div>
     <div class="sidebar-item active" onclick="showSection('overview')"><i class="ti ti-home"></i> 總覽</div>
-    <div class="sidebar-item" id="sb-flow" onclick="showSection('flow')"><i class="ti ti-arrows-right"></i> 導購流程</div>
-    <div class="sidebar-item" id="sb-orderinfo" onclick="showSection('orderinfo')"><i class="ti ti-send"></i> 首次回拋 API</div>
-    <div class="sidebar-item" id="sb-orderfinish" onclick="showSection('orderfinish')"><i class="ti ti-receipt"></i> 請款回拋 API</div>
-    <div class="sidebar-item" id="sb-feed" onclick="showSection('feed')"><i class="ti ti-package"></i> 商品資料 Feed</div>
-    <div class="sidebar-item" id="sb-errors" onclick="showSection('errors')"><i class="ti ti-alert-circle"></i> 錯誤代碼</div>
+    <div class="sidebar-item" id="sb-flow" onclick="showSection('flow')"><i class="ti ti-arrows-right"></i> ① 導購流程</div>
+    <div class="sidebar-item locked" id="sb-orderinfo" onclick="showSection('orderinfo')"><i class="ti ti-send"></i> ② 首次回拋 API</div>
+    <div class="sidebar-item locked" id="sb-orderfinish" onclick="showSection('orderfinish')"><i class="ti ti-receipt"></i> ③ 請款回拋 API</div>
+    <div class="sidebar-item locked" id="sb-feed" onclick="showSection('feed')"><i class="ti ti-package"></i> ④ 商品資料 Feed</div>
+    <div class="sidebar-item locked" id="sb-errors" onclick="showSection('errors')"><i class="ti ti-alert-circle"></i> ⑤ 錯誤代碼</div>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-label">其他</div>
@@ -274,36 +264,23 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
     <div class="sidebar-item" id="sb-admin" onclick="showSection('admin')" style="display:none"><i class="ti ti-chart-bar"></i> 進度總覽</div>
   </div>
 </aside>
-
 <main class="main">
 
 <!-- OVERVIEW -->
 <div class="section active" id="section-overview">
   <div class="hero">
-    <h1>👋 歡迎來到 LINE 購物合作夥伴串接訓練</h1>
-    <p>涵蓋導購流程、訂單回拋 API、商品資料規格與常見錯誤。每個章節看完後需通過小測驗，才會計入進度。</p>
-    <div class="hero-chips">
-      <span class="hero-chip" onclick="showSection('flow')">📊 導購流程</span>
-      <span class="hero-chip" onclick="showSection('orderinfo')">🛒 首次回拋</span>
-      <span class="hero-chip" onclick="showSection('orderfinish')">💳 請款回拋</span>
-      <span class="hero-chip" onclick="showSection('feed')">📦 商品資料</span>
-      <span class="hero-chip" onclick="showSection('ai')">🤖 AI 助理</span>
-    </div>
+    <h1>👋 歡迎來到 LINE 購物串接訓練</h1>
+    <p>按照建議順序學習，每個章節看完後需通過測驗（含情境實戰題）。AI 助理隨時可用。</p>
   </div>
   <div class="progress-bar-wrap">
     <span class="progress-label">學習進度</span>
     <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
     <span class="progress-pct" id="progress-pct">0%</span>
   </div>
+  <div id="path-stepper-overview"></div>
   <h2>學習模組</h2>
-  <div class="module-grid">
-    <div class="module-card" id="mc-flow" onclick="showSection('flow')"><div class="mc-icon">📊</div><div class="mc-title">導購流程</div><div class="mc-desc">ecid、Cookie、流程說明</div><div class="mc-check" id="mcc-flow"><i class="ti ti-check"></i></div></div>
-    <div class="module-card" id="mc-orderinfo" onclick="showSection('orderinfo')"><div class="mc-icon">🛒</div><div class="mc-title">首次訂單回拋</div><div class="mc-desc">orderinfo API 欄位與規範</div><div class="mc-check" id="mcc-orderinfo"><i class="ti ti-check"></i></div></div>
-    <div class="module-card" id="mc-orderfinish" onclick="showSection('orderfinish')"><div class="mc-icon">💳</div><div class="mc-title">請款訂單回拋</div><div class="mc-desc">orderfinish API 與鑑賞期</div><div class="mc-check" id="mcc-orderfinish"><i class="ti ti-check"></i></div></div>
-    <div class="module-card" id="mc-feed" onclick="showSection('feed')"><div class="mc-icon">📦</div><div class="mc-title">商品資料 Feed</div><div class="mc-desc">product_full / partial / cate</div><div class="mc-check" id="mcc-feed"><i class="ti ti-check"></i></div></div>
-    <div class="module-card" id="mc-errors" onclick="showSection('errors')"><div class="mc-icon">⚠️</div><div class="mc-title">錯誤代碼</div><div class="mc-desc">Fail 訊息說明與修正</div><div class="mc-check" id="mcc-errors"><i class="ti ti-check"></i></div></div>
-  </div>
-  <div class="callout callout-info"><i class="ti ti-info-circle"></i><div>點選章節開始學習，看完內容後點「完成閱讀，開始測驗」，全部答對才會計入進度。</div></div>
+  <div class="module-grid" id="module-grid"></div>
+  <div class="callout callout-info"><i class="ti ti-info-circle"></i><div>依照 ①→②→③→④→⑤ 順序學習，完成前一章才能解鎖下一章。每章結尾有測驗，答錯會有解釋幫助理解。</div></div>
   <div class="card">
     <div class="card-title"><i class="ti ti-tool"></i> 技術環境快速參考</div>
     <table class="param-table">
@@ -311,8 +288,8 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
       <tr><td>Sandbox URL</td><td><code>https://buy-order-api-ec-sandbox.line.me</code></td></tr>
       <tr><td>Production URL</td><td><code>https://buy-order-api.line.me</code></td></tr>
       <tr><td>Content-Type</td><td><code>application/x-www-form-urlencoded; charset=UTF-8</code></td></tr>
-      <tr><td>首次回拋 Endpoint</td><td><code>/tracking/orderinfo</code></td></tr>
-      <tr><td>請款回拋 Endpoint</td><td><code>/tracking/orderfinish</code></td></tr>
+      <tr><td>首次回拋</td><td><code>POST /tracking/orderinfo</code></td></tr>
+      <tr><td>請款回拋</td><td><code>POST /tracking/orderfinish</code></td></tr>
       <tr><td>聯絡窗口</td><td><code>dl_tw_ec_fas@linecorp.com</code></td></tr>
     </table>
   </div>
@@ -320,17 +297,18 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 
 <!-- FLOW -->
 <div class="section" id="section-flow">
-  <h2><i class="ti ti-arrows-right" style="color:var(--green)"></i> 導購流程</h2>
-  <div class="card">
-    <div class="card-title"><i class="ti ti-route"></i> 完整導購流程（點步驟查看說明）</div>
+  <div id="path-stepper-flow"></div>
+  <h2><i class="ti ti-arrows-right" style="color:var(--green)"></i> ① 導購流程</h2>
+  <div class="summary-box"><div class="sb-header"><i class="ti ti-bulb"></i> 30 秒快速理解</div><div class="sb-body">用戶從 LINE 購物出發 → 經過<strong>跳轉頁（TP）產生 ecid</strong> → 合作夥伴<strong>記錄 ecid 在 Cookie（至少24小時）</strong> → 訂單成立後<strong>即時呼叫 orderinfo</strong> → 過鑑賞期後<strong>呼叫 orderfinish</strong> → ordertime + 30 天後<strong>發送 LINE POINTS</strong>。金額要扣掉運費和優惠券，優惠券按比例攤提。</div></div>
+  <div class="card"><div class="card-title"><i class="ti ti-route"></i> 完整導購流程（點步驟查看說明）</div>
     <div class="flow-wrap"><div class="flow-steps">
       <div class="flow-step" onclick="showFlowDetail(1)"><div class="flow-num">1</div><div class="flow-title">進入 LINE 購物</div><div class="flow-sub">用戶觸發</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
       <div class="flow-step" onclick="showFlowDetail(2)"><div class="flow-num">2</div><div class="flow-title">跳轉頁 TP</div><div class="flow-sub">產生 ecid</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
       <div class="flow-step" onclick="showFlowDetail(3)"><div class="flow-num">3</div><div class="flow-title">記錄 Cookie</div><div class="flow-sub">合作夥伴端</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
       <div class="flow-step" onclick="showFlowDetail(4)"><div class="flow-num">4</div><div class="flow-title">訂單成立</div><div class="flow-sub">記錄於伺服器</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
-      <div class="flow-step" onclick="showFlowDetail(5)"><div class="flow-num">5</div><div class="flow-title">回拋首次訂單</div><div class="flow-sub">orderinfo API</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
+      <div class="flow-step" onclick="showFlowDetail(5)"><div class="flow-num">5</div><div class="flow-title">回拋首次訂單</div><div class="flow-sub">orderinfo</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
       <div class="flow-step" onclick="showFlowDetail(6)"><div class="flow-num">6</div><div class="flow-title">AOA 通知</div><div class="flow-sub">LINE 發給用戶</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
-      <div class="flow-step" onclick="showFlowDetail(7)"><div class="flow-num">7</div><div class="flow-title">回拋請款</div><div class="flow-sub">orderfinish API</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
+      <div class="flow-step" onclick="showFlowDetail(7)"><div class="flow-num">7</div><div class="flow-title">回拋請款</div><div class="flow-sub">orderfinish</div><div class="flow-arrow"><i class="ti ti-chevron-right"></i></div></div>
       <div class="flow-step" onclick="showFlowDetail(8)"><div class="flow-num">8</div><div class="flow-title">發送 POINTS</div><div class="flow-sub">+30 天後</div></div>
     </div></div>
   </div>
@@ -338,72 +316,54 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
   <h3>核心重點</h3>
   <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div><strong>ecid 記錄最新值：</strong>同一用戶每次跳轉都會產生不同 ecid，Cookie 有效時間至少 24 小時。</div></div>
   <div class="callout callout-info"><i class="ti ti-info-circle"></i><div><strong>訂單成立定義：</strong>Cookie 效期內所有導購訂單皆須回拋，含購物車跨店、多次購物等情境。</div></div>
-  <div class="callout callout-success"><i class="ti ti-calculator"></i><div><strong>金額計算：</strong>甲 1,000 + 乙 1,500 = 2,500，優惠券 300，回拋總額 2,200。甲：880，乙：1,320。</div></div>
+  <div class="callout callout-success"><i class="ti ti-calculator"></i><div><strong>金額計算：</strong>甲 1,000 + 乙 1,500 = 2,500，優惠券 300，回拋總額 2,200。甲：880，乙：1,320（優惠券按商品金額比例攤提）。</div></div>
   <button class="read-toggle" id="toggle-flow" onclick="triggerQuiz('flow')"><i class="ti ti-pencil"></i> 完成閱讀，開始測驗</button>
   <div id="quiz-area-flow"></div>
 </div>
 
 <!-- ORDERINFO -->
 <div class="section" id="section-orderinfo">
-  <h2><i class="ti ti-send" style="color:var(--green)"></i> 首次訂單回拋 API（orderinfo）</h2>
-  <div class="callout callout-info"><i class="ti ti-info-circle"></i><div>訂單成立後須<strong>即時</strong>呼叫。POST <code>https://buy-order-api.line.me/tracking/orderinfo</code></div></div>
+  <div id="path-stepper-orderinfo"></div>
+  <h2><i class="ti ti-send" style="color:var(--green)"></i> ② 首次訂單回拋 API（orderinfo）</h2>
+  <div class="summary-box"><div class="sb-header"><i class="ti ti-bulb"></i> 30 秒快速理解</div><div class="sb-body">訂單成立後<strong>即時呼叫</strong> POST <code>/tracking/orderinfo</code>。金額欄位叫 <strong>product_amount</strong>（不是 product_fee）。Hash 用 <strong>ordertime 做 MD5</strong> 得到 key，再 HMAC-SHA256。付款/物流/用戶身份等欄位<strong>只有 orderinfo 能提供</strong>，一旦成功就無法更新。</div></div>
   <div class="tab-row">
     <button class="tab-btn active" onclick="switchTab(this,'oi-required')">必填欄位</button>
     <button class="tab-btn" onclick="switchTab(this,'oi-optional')">選填欄位</button>
     <button class="tab-btn" onclick="switchTab(this,'oi-hash')">Hash 產生</button>
-    <button class="tab-btn" onclick="switchTab(this,'oi-example')">範例</button>
+    <button class="tab-btn" onclick="switchTab(this,'oi-calc')">Hash 計算器</button>
   </div>
   <div class="tab-content active" id="oi-required">
     <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>型別</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>site</code> <span class="tag tag-required">必填</span></td><td>int</td><td>固定值 <code>2</code></td></tr>
-          <tr><td><code>shopid</code> <span class="tag tag-required">必填</span></td><td>int</td><td>LINE 購物核發之商城代號</td></tr>
-          <tr><td><code>authkey</code> <span class="tag tag-required">必填</span></td><td>string</td><td>LINE 購物核發之認證代碼</td></tr>
-          <tr><td><code>ecid</code> <span class="tag tag-required">必填</span></td><td>string</td><td>64碼英數混合用戶識別碼</td></tr>
-          <tr><td><code>timestamp</code> <span class="tag tag-required">必填</span></td><td>int</td><td>Unix timestamp</td></tr>
-          <tr><td><code>hash</code> <span class="tag tag-required">必填</span></td><td>string</td><td>HMAC-SHA256 驗證碼</td></tr>
-          <tr><td><code>orderid</code> <span class="tag tag-required">必填</span></td><td>string</td><td>訂單編號，支援 <code>a-z A-Z 0-9 # - _</code></td></tr>
-          <tr><td><code>ordertime</code> <span class="tag tag-required">必填</span></td><td>string</td><td>GMT+8，格式 <code>YYYY-MM-DD HH24:MI:SS</code></td></tr>
-          <tr><td><code>ordertotal</code> <span class="tag tag-required">必填</span></td><td>int</td><td>訂單總金額，須等於 product_amount 加總</td></tr>
-          <tr><td><code>order_list[].product.product_name</code> <span class="tag tag-required">必填</span></td><td>string</td><td>商品名稱</td></tr>
-          <tr><td><code>order_list[].product.product_type</code> <span class="tag tag-required">必填</span></td><td>string</td><td><code>normal</code> 或 <code>3c</code></td></tr>
-          <tr><td><code>order_list[].product.product_id</code> <span class="tag tag-required">必填</span></td><td>string</td><td>商品編號</td></tr>
-          <tr><td><code>order_list[].product.product_amount</code> <span class="tag tag-required">必填</span></td><td>int</td><td>品項總金額，優惠券須按比例攤提。<strong>不可寫成 product_fee</strong></td></tr>
-          <tr><td><code>order_list[].product.sub_category1</code> <span class="tag tag-required">必填</span></td><td>string</td><td>第一層目錄名稱</td></tr>
-          <tr><td><code>order_list[].product.sub_category2</code> <span class="tag tag-optional">選填</span></td><td>string</td><td>第二層目錄名稱</td></tr>
-        </tbody>
-      </table>
+      <table class="param-table"><thead><tr><th>欄位</th><th>型別</th><th>說明</th></tr></thead><tbody>
+        <tr><td><code>site</code> <span class="tag tag-required">必填</span></td><td>int</td><td>固定值 <code>2</code></td></tr>
+        <tr><td><code>shopid</code> <span class="tag tag-required">必填</span></td><td>int</td><td>LINE 購物核發之商城代號</td></tr>
+        <tr><td><code>authkey</code> <span class="tag tag-required">必填</span></td><td>string</td><td>LINE 購物核發之認證代碼</td></tr>
+        <tr><td><code>ecid</code> <span class="tag tag-required">必填</span></td><td>string</td><td>64碼英數混合用戶識別碼</td></tr>
+        <tr><td><code>timestamp</code> <span class="tag tag-required">必填</span></td><td>int</td><td>Unix timestamp</td></tr>
+        <tr><td><code>hash</code> <span class="tag tag-required">必填</span></td><td>string</td><td>HMAC-SHA256 驗證碼</td></tr>
+        <tr><td><code>orderid</code> <span class="tag tag-required">必填</span></td><td>string</td><td>支援 <code>a-z A-Z 0-9 # - _</code></td></tr>
+        <tr><td><code>ordertime</code> <span class="tag tag-required">必填</span></td><td>string</td><td>GMT+8，<code>YYYY-MM-DD HH24:MI:SS</code></td></tr>
+        <tr><td><code>ordertotal</code> <span class="tag tag-required">必填</span></td><td>int</td><td>須等於 product_amount 加總</td></tr>
+        <tr><td><code>product_amount</code> <span class="tag tag-required">必填</span></td><td>int</td><td>品項總金額，優惠券須按比例攤提。<strong>不可寫成 product_fee</strong></td></tr>
+        <tr><td><code>sub_category1</code> <span class="tag tag-required">必填</span></td><td>string</td><td>第一層目錄名稱</td></tr>
+      </tbody></table>
     </div>
     <div class="callout callout-error"><i class="ti ti-alert-circle"></i><div>orderinfo 金額欄位是 <code>product_amount</code>，orderfinish 才是 <code>product_fee</code>，切勿搞混。</div></div>
   </div>
   <div class="tab-content" id="oi-optional">
     <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>payment_method</code></td><td><code>CASH</code> / <code>CREDITCARD</code> / <code>THIRDPARTY</code></td></tr>
-          <tr><td><code>third_payment</code></td><td><code>LINEPAY</code> / <code>APPLEPAY</code> / <code>GOOGLEPAY</code> 等</td></tr>
-          <tr><td><code>card_brand</code></td><td><code>VISA</code>/<code>MASTER</code>/<code>AMEX</code>/<code>JCB</code> 等，<strong>不可回傳 0</strong></td></tr>
-          <tr><td><code>bank_code</code></td><td>發卡銀行代碼，三位數</td></tr>
-          <tr><td><code>card_number</code></td><td>信用卡前六碼</td></tr>
-          <tr><td><code>delivery_method</code></td><td><code>HOMEDELIVERY</code> / <code>CVS</code> / <code>FASTDELIVERY</code> / <code>INSTORE</code> / <code>OTHER</code></td></tr>
-          <tr><td><code>cvs</code></td><td><code>7ELEVEN</code> / <code>FAMILYMART</code> / <code>OKMART</code> / <code>HILIFE</code> 等</td></tr>
-          <tr><td><code>temperature</code></td><td><code>NORMAL</code> / <code>CHILLED</code> / <code>FROZEN</code> / <code>OTHER</code></td></tr>
-          <tr><td><code>is_new_member</code></td><td><code>1</code>=首購，<code>0</code>=非首購</td></tr>
-          <tr><td><code>is_vip</code></td><td><code>1</code>=VIP，<code>0</code>=非VIP</td></tr>
-          <tr><td><code>is_app</code></td><td><code>1</code>=透過APP下單</td></tr>
-          <tr><td><code>custom_tag</code></td><td>自定義行銷標籤</td></tr>
-          <tr><td><code>invoice_number</code></td><td>兩位大寫英文 + 八位數字，例：<code>AB11223344</code></td></tr>
-          <tr><td><code>random_number</code></td><td>電子發票四位隨機碼</td></tr>
-        </tbody>
-      </table>
+      <table class="param-table"><thead><tr><th>欄位</th><th>說明</th></tr></thead><tbody>
+        <tr><td><code>payment_method</code></td><td><code>CASH</code>/<code>CREDITCARD</code>/<code>THIRDPARTY</code></td></tr>
+        <tr><td><code>third_payment</code></td><td><code>LINEPAY</code>/<code>APPLEPAY</code>/<code>GOOGLEPAY</code> 等</td></tr>
+        <tr><td><code>card_brand</code></td><td><code>VISA</code>/<code>MASTER</code>/<code>JCB</code> 等，<strong>不可回傳 0</strong></td></tr>
+        <tr><td><code>delivery_method</code></td><td><code>HOMEDELIVERY</code>/<code>CVS</code>/<code>FASTDELIVERY</code>/<code>INSTORE</code></td></tr>
+        <tr><td><code>is_new_member</code> / <code>is_vip</code> / <code>is_app</code></td><td><code>1</code>=是，<code>0</code>=否</td></tr>
+        <tr><td><code>invoice_number</code></td><td>兩位大寫英文+八位數字</td></tr>
+      </tbody></table>
     </div>
     <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div>付款、物流、用戶身份及 custom_tag <strong>只有 orderinfo 能提供</strong>，一旦成功就無法更新。</div></div>
   </div>
   <div class="tab-content" id="oi-hash">
-    <h3>Hash 產生步驟</h3>
     <div class="hash-demo"><code>
       <span class="comment">// Step 1: ordertime 做 MD5</span><br>
       ordertime_hashkey = md5('2018-02-01 22:05:15')<br><br>
@@ -411,18 +371,24 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
       hash = hash_hmac('sha256',<br>
       &nbsp;&nbsp;'orderid=20180201080001&ordertotal=500&timestamp=1521011327',<br>
       &nbsp;&nbsp;ordertime_hashkey)<br><br>
-      <span class="comment">// 結果：</span><br>
-      073f5eceb14197c25563a7fd76125632dbe0809c679d2e7c384d028bde17d542
+      <span class="comment">// 結果：</span><br>073f5eceb14197c25563a7fd76125632dbe0809c679d2e7c384d028bde17d542
     </code></div>
-    <div class="callout callout-warn" style="margin-top:10px"><i class="ti ti-alert-triangle"></i><div>orderfinish 的 hash 用 <code>feetime</code> 做 MD5，簽名字串也不同，規則有差異！</div></div>
   </div>
-  <div class="tab-content" id="oi-example">
-    <div class="hash-demo"><code>
-"order_list": [<br>
-&nbsp;&nbsp;{"product": {"product_name":"衛生紙","product_type":"normal","product_id":"A00073","product_amount":300,"sub_category1":"居家用品","sub_category2":"紙棉類"}},<br>
-&nbsp;&nbsp;{"product": {"product_name":"肥皂","product_type":"normal","product_id":"A00063","product_amount":150,"sub_category1":"居家用品","sub_category2":"沐浴用品"}}<br>
-]
-    </code></div>
+  <div class="tab-content" id="oi-calc">
+    <div class="hash-calc">
+      <h4><i class="ti ti-calculator"></i> 互動式 Hash 計算器（orderinfo）</h4>
+      <p style="font-size:12px;color:var(--gray-600)">填入參數後按計算，觀察每一步的結果。</p>
+      <label>ordertime</label><input id="hc-ordertime" value="2018-02-01 22:05:15" placeholder="YYYY-MM-DD HH24:MI:SS">
+      <label>orderid</label><input id="hc-orderid" value="20180201080001">
+      <label>ordertotal</label><input id="hc-ordertotal" value="500">
+      <label>timestamp</label><input id="hc-timestamp" value="1521011327">
+      <button onclick="calcHash()">計算 Hash</button>
+      <div id="hc-steps" style="display:none">
+        <div class="hc-step" id="hc-step1"></div>
+        <div class="hc-step" id="hc-step2"></div>
+        <div class="hc-result" id="hc-result"></div>
+      </div>
+    </div>
   </div>
   <button class="read-toggle" id="toggle-orderinfo" onclick="triggerQuiz('orderinfo')"><i class="ti ti-pencil"></i> 完成閱讀，開始測驗</button>
   <div id="quiz-area-orderinfo"></div>
@@ -430,8 +396,9 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 
 <!-- ORDERFINISH -->
 <div class="section" id="section-orderfinish">
-  <h2><i class="ti ti-receipt" style="color:var(--green)"></i> 請款訂單回拋 API（orderfinish）</h2>
-  <div class="callout callout-info"><i class="ti ti-clock"></i><div>於訂單過<strong>鑑賞期後（平均 7–14 天）</strong>呼叫。POST <code>https://buy-order-api.line.me/tracking/orderfinish</code></div></div>
+  <div id="path-stepper-orderfinish"></div>
+  <h2><i class="ti ti-receipt" style="color:var(--green)"></i> ③ 請款訂單回拋 API（orderfinish）</h2>
+  <div class="summary-box"><div class="sb-header"><i class="ti ti-bulb"></i> 30 秒快速理解</div><div class="sb-body">鑑賞期後（7-14天）呼叫 POST <code>/tracking/orderfinish</code>。金額欄位叫 <strong>product_fee</strong>（不是 product_amount）。Hash 用 <strong>feetime 做 MD5</strong>，簽名字串也不同。<strong>整筆退貨不須呼叫</strong>，部分退貨才要呼叫並扣除退貨品項。</div></div>
   <div class="tab-row">
     <button class="tab-btn active" onclick="switchTab(this,'of-required')">必填欄位</button>
     <button class="tab-btn" onclick="switchTab(this,'of-hash')">Hash 產生</button>
@@ -439,17 +406,13 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
   </div>
   <div class="tab-content active" id="of-required">
     <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>型別</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>site / shopid / authkey / ecid / timestamp / hash / orderid</code></td><td>-</td><td>同 orderinfo</td></tr>
-          <tr><td><code>ordertime</code> <span class="tag tag-required">必填</span></td><td>string</td><td>不可與 orderinfo 的值不同</td></tr>
-          <tr><td><code>feetotal</code> <span class="tag tag-required">必填</span></td><td>int</td><td>請款總金額，等於 product_fee 加總</td></tr>
-          <tr><td><code>feetime</code> <span class="tag tag-required">必填</span></td><td>string</td><td>消費者確認完成且過鑑賞期的時間，GMT+8</td></tr>
-          <tr><td><code>fee_list[].product.product_fee</code> <span class="tag tag-required">必填</span></td><td>int</td><td>品項實際金額。<strong>不可寫成 product_amount</strong></td></tr>
-          <tr><td><code>fee_list[].product.product_name/type/id/sub_category1</code></td><td>-</td><td>同 orderinfo，須一致</td></tr>
-        </tbody>
-      </table>
+      <table class="param-table"><thead><tr><th>欄位</th><th>型別</th><th>說明</th></tr></thead><tbody>
+        <tr><td><code>site/shopid/authkey/ecid/timestamp/hash/orderid</code></td><td>-</td><td>同 orderinfo</td></tr>
+        <tr><td><code>ordertime</code></td><td>string</td><td>不可與 orderinfo 的值不同</td></tr>
+        <tr><td><code>feetotal</code> <span class="tag tag-required">必填</span></td><td>int</td><td>等於 product_fee 加總</td></tr>
+        <tr><td><code>feetime</code> <span class="tag tag-required">必填</span></td><td>string</td><td>消費者確認完成且過鑑賞期的時間</td></tr>
+        <tr><td><code>product_fee</code> <span class="tag tag-required">必填</span></td><td>int</td><td>品項實際金額。<strong>不可寫成 product_amount</strong></td></tr>
+      </tbody></table>
     </div>
     <div class="callout callout-error"><i class="ti ti-alert-circle"></i><div>orderfinish 金額欄位是 <code>product_fee</code>，總金額是 <code>feetotal</code>。與 orderinfo 的欄位名稱不同！</div></div>
   </div>
@@ -461,13 +424,12 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
       hash = hash_hmac('sha256',<br>
       &nbsp;&nbsp;'orderid=20180201080001&feetime=2018-02-16 10:05:15&feetotal=500&timestamp=1521011477',<br>
       &nbsp;&nbsp;feetime_hashkey)<br><br>
-      <span class="comment">// 結果：</span><br>
-      9ca2cf51ca2427d336b6f0e7f27e0527846060de295550528cfce58aff1108d7
+      <span class="comment">// 結果：</span><br>9ca2cf51ca2427d336b6f0e7f27e0527846060de295550528cfce58aff1108d7
     </code></div>
   </div>
   <div class="tab-content" id="of-example">
     <p>部分退貨：fee_list 只放未退貨商品，金額扣除退貨品項。</p>
-    <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div><strong>整筆退貨</strong>時，完全不需要呼叫 orderfinish。</div></div>
+    <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div><strong>整筆退貨</strong>完全不需要呼叫 orderfinish。</div></div>
   </div>
   <button class="read-toggle" id="toggle-orderfinish" onclick="triggerQuiz('orderfinish')"><i class="ti ti-pencil"></i> 完成閱讀，開始測驗</button>
   <div id="quiz-area-orderfinish"></div>
@@ -475,96 +437,40 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 
 <!-- FEED -->
 <div class="section" id="section-feed">
-  <h2><i class="ti ti-package" style="color:var(--green)"></i> 商品資料 Feed 規格</h2>
+  <div id="path-stepper-feed"></div>
+  <h2><i class="ti ti-package" style="color:var(--green)"></i> ④ 商品資料 Feed 規格</h2>
+  <div class="summary-box"><div class="sb-header"><i class="ti ti-bulb"></i> 30 秒快速理解</div><div class="sb-body">三支 API：<strong>product_full</strong>（每日）提供全部商品、<strong>product_partial</strong>（每小時）提供異動商品、<strong>cate_full</strong>（每日）提供目錄。格式 JSON UTF-8。圖片更換時<strong>網址必須不同</strong>。顏色只支援 17 種定義值。</div></div>
   <div class="card">
     <div class="card-title"><i class="ti ti-files"></i> 三支 API 總覽</div>
-    <table class="param-table">
-      <thead><tr><th>檔案名稱</th><th>更新頻率</th><th>說明</th></tr></thead>
-      <tbody>
-        <tr><td><code>product_full</code></td><td><span class="tag tag-green">每日一次</span></td><td>全部商品資料</td></tr>
-        <tr><td><code>product_partial</code></td><td><span class="tag" style="background:#fef7e0;color:#b45309">每小時一次</span></td><td>前一小時有異動的商品</td></tr>
-        <tr><td><code>cate_full</code></td><td><span class="tag tag-green">每日一次</span></td><td>全部商品目錄資料</td></tr>
-      </tbody>
-    </table>
+    <table class="param-table"><thead><tr><th>檔案</th><th>頻率</th><th>說明</th></tr></thead><tbody>
+      <tr><td><code>product_full</code></td><td><span class="tag tag-green">每日</span></td><td>全部商品</td></tr>
+      <tr><td><code>product_partial</code></td><td><span class="tag" style="background:#fef7e0;color:#b45309">每小時</span></td><td>異動商品</td></tr>
+      <tr><td><code>cate_full</code></td><td><span class="tag tag-green">每日</span></td><td>全部目錄</td></tr>
+    </tbody></table>
   </div>
   <div class="callout callout-info"><i class="ti ti-server"></i><div><strong>IP 白名單：</strong><code>223.26.70.247</code>、<code>147.92.187.35</code>、<code>223.26.70.11</code></div></div>
-  <div class="tab-row">
-    <button class="tab-btn active" onclick="switchTab(this,'feed-basic')">基本欄位</button>
-    <button class="tab-btn" onclick="switchTab(this,'feed-price')">價格與庫存</button>
-    <button class="tab-btn" onclick="switchTab(this,'feed-cat')">商品目錄</button>
-  </div>
-  <div class="tab-content active" id="feed-basic">
-    <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>必填</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>product_id</code></td><td><span class="tag tag-required">必填</span></td><td>唯一值，英數及 <code>-</code>，至多 50 字</td></tr>
-          <tr><td><code>product_name</code></td><td><span class="tag tag-required">必填</span></td><td>至多 100 字，不含促銷文字</td></tr>
-          <tr><td><code>description</code></td><td><span class="tag tag-required">必填</span></td><td>短描述，至多 5,000 字，不支援 HTML</td></tr>
-          <tr><td><code>l_description</code></td><td><span class="tag tag-required">必填</span></td><td>長描述，至多 60,000 字，支援 HTML</td></tr>
-          <tr><td><code>link</code></td><td><span class="tag tag-required">必填</span></td><td>https，中文須 urlencode</td></tr>
-          <tr><td><code>image_link</code></td><td><span class="tag tag-required">必填</span></td><td>https，更換圖片須更換 URL</td></tr>
-          <tr><td><code>color</code></td><td><span class="tag tag-optional">選填</span></td><td>17 種定義值，多色用 <code>/</code> 區隔</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="tab-content" id="feed-price">
-    <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>必填</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>availability</code></td><td><span class="tag tag-required">必填</span></td><td><code>in stock</code> / <code>preorder</code> / <code>discontinued</code></td></tr>
-          <tr><td><code>price</code></td><td><span class="tag tag-required">必填</span></td><td>原價，正整數，新台幣</td></tr>
-          <tr><td><code>sale_price</code></td><td><span class="tag tag-optional">選填</span></td><td>特價，不可大於 price</td></tr>
-          <tr><td><code>product_type</code></td><td><span class="tag tag-required">必填</span></td><td><code>normal</code> 或 <code>3c</code></td></tr>
-          <tr><td><code>product_category_value</code></td><td><span class="tag tag-required">必填</span></td><td>對應 cate_full 目錄編號</td></tr>
-          <tr><td><code>age_group</code></td><td><span class="tag tag-required">必填</span></td><td><code>normal</code> 或 <code>adult</code>（18+）</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="tab-content" id="feed-cat">
-    <div class="card" style="padding:0;overflow:hidden">
-      <table class="param-table">
-        <thead><tr><th>欄位</th><th>說明</th></tr></thead>
-        <tbody>
-          <tr><td><code>category_title</code></td><td>目錄名稱</td></tr>
-          <tr><td><code>category_value</code></td><td>目錄編號（唯一值）</td></tr>
-          <tr><td><code>category_value_parent</code></td><td>上層目錄編號；第一層填 <code>0</code></td></tr>
-          <tr><td><code>category_flag</code></td><td><code>1</code>=上架，<code>0</code>=下架</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
   <button class="read-toggle" id="toggle-feed" onclick="triggerQuiz('feed')"><i class="ti ti-pencil"></i> 完成閱讀，開始測驗</button>
   <div id="quiz-area-feed"></div>
 </div>
 
 <!-- ERRORS -->
 <div class="section" id="section-errors">
-  <h2><i class="ti ti-alert-circle" style="color:var(--green)"></i> 回應訊息對照表</h2>
+  <div id="path-stepper-errors"></div>
+  <h2><i class="ti ti-alert-circle" style="color:var(--green)"></i> ⑤ 回應訊息對照表</h2>
+  <div class="summary-box"><div class="sb-header"><i class="ti ti-bulb"></i> 30 秒快速理解</div><div class="sb-body">API 回傳 <strong>OK</strong> 就是成功。回傳 <strong>Fail</strong> 開頭就是有錯，依據訊息修正後重送。常見的坑：<strong>product_amount 和 product_fee 名稱搞混</strong>、<strong>hash 的 orderinfo 和 orderfinish 規則不同</strong>、<strong>ordertime 第一次送出後不能改</strong>、<strong>金額加總誤差不能超過 10</strong>。</div></div>
   <div style="margin-bottom:10px"><input type="text" id="error-search" placeholder="搜尋錯誤訊息..." oninput="filterErrors()" style="width:100%;padding:8px 12px;border:1px solid var(--gray-200);border-radius:8px;font-size:13px;outline:none;"></div>
   <div class="card" style="padding:0;overflow:hidden">
     <table class="param-table"><thead><tr><th>狀態</th><th>回應訊息</th><th>說明</th></tr></thead>
     <tbody id="error-tbody">
-      <tr><td><span class="error-tag error-tag-ok">OK</span></td><td><code>OK</code></td><td>資料正確，拋送成功</td></tr>
+      <tr><td><span class="error-tag error-tag-ok">OK</span></td><td><code>OK</code></td><td>成功</td></tr>
       <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, invalid IP</code></td><td>IP 未在白名單</td></tr>
       <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, authkey is not valid</code></td><td>authkey 不合法</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, shopid is not valid</code></td><td>shopid 不合法</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, orderid is not valid</code></td><td>訂單編號格式有誤</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, ecid is not valid</code></td><td>ecid 不合法</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order total is not valid</code></td><td>ordertotal 不合法，須為正整數或 0</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order time is not valid</code></td><td>ordertime 格式錯誤</td></tr>
       <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order time changed</code></td><td>ordertime 不允許更改</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order list is not valid</code></td><td>order_list JSON 格式錯誤</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, Missing field</code></td><td>有欄位為空值</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order status is not valid</code></td><td>已發點，不允許再次 orderfinish</td></tr>
       <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, product_type is not valid</code></td><td>product_type 不允許更改</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, sum. of product amount is not valid</code></td><td>ordertotal 與 product_amount 加總誤差超過 10</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, sum. of product_fee amount is not valid</code></td><td>feetotal 與 product_fee 加總誤差超過 10</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, hash is not valid</code></td><td>hash 錯誤，檢查簽名字串與 hashkey</td></tr>
-      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, opps somethings wrong</code></td><td>其他問題，聯絡 dl_tw_ec_fas@linecorp.com</td></tr>
+      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, order status is not valid</code></td><td>已發點，不能再 orderfinish</td></tr>
+      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, sum. of product amount is not valid</code></td><td>ordertotal 與加總誤差超過 10</td></tr>
+      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, hash is not valid</code></td><td>hash 錯誤，檢查簽名字串</td></tr>
+      <tr><td><span class="error-tag error-tag-fail">Fail</span></td><td><code>Fail, Missing field</code></td><td>有欄位為空值</td></tr>
     </tbody></table>
   </div>
   <button class="read-toggle" id="toggle-errors" onclick="triggerQuiz('errors')"><i class="ti ti-pencil"></i> 完成閱讀，開始測驗</button>
@@ -575,15 +481,8 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 <div class="section" id="section-ai">
   <h2><i class="ti ti-message-chatbot" style="color:var(--green)"></i> AI 問答助理</h2>
   <p style="margin-bottom:10px">根據 LINE 購物官方技術文件回答，不確定的事項請向主管確認。</p>
-  <div class="quick-q">
-    <button class="quick-btn" onclick="sendQuick('hash 怎麼產生？orderinfo 和 orderfinish 有差別嗎？')">Hash 怎麼產生？</button>
-    <button class="quick-btn" onclick="sendQuick('有優惠券時 product_amount 要怎麼計算？')">優惠券如何攤提？</button>
-    <button class="quick-btn" onclick="sendQuick('ecid 是什麼？要怎麼記錄？')">ecid 怎麼處理？</button>
-    <button class="quick-btn" onclick="sendQuick('整筆訂單退貨要怎麼處理？')">整筆退貨怎麼做？</button>
-    <button class="quick-btn" onclick="sendQuick('product_type 可以在 orderfinish 時更改嗎？')">product_type 能改嗎？</button>
-    <button class="quick-btn" onclick="sendQuick('商品資料 Feed 需要幾支 API？')">Data Feed 規格</button>
-  </div>
-  <div id="chat-messages"></div>
+  <div class="quick-q" id="ai-quick-q"></div>
+  <div class="chat-messages" id="chat-messages"></div>
   <div class="chat-input-wrap">
     <textarea class="chat-input" id="chat-input" rows="1" placeholder="輸入問題…" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
     <button class="chat-send" id="chat-send-btn" onclick="sendMessage()"><i class="ti ti-send"></i></button>
@@ -593,11 +492,11 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 <!-- ADMIN -->
 <div class="section" id="section-admin">
   <h2><i class="ti ti-chart-bar" style="color:var(--green)"></i> 學員進度總覽</h2>
-  <div class="callout callout-info"><i class="ti ti-info-circle"></i><div>此頁面顯示所有學員的學習與答題紀錄，資料即時同步。</div></div>
+  <div class="callout callout-info"><i class="ti ti-info-circle"></i><div>顯示所有學員的學習進度與答題紀錄，包含答錯的題目與嘗試次數。</div></div>
   <div class="card" style="padding:0;overflow:hidden">
     <table class="admin-table" id="admin-table">
-      <thead><tr><th>姓名</th><th>整體進度</th><th>模組狀態</th><th>最後更新</th></tr></thead>
-      <tbody id="admin-tbody"><tr><td colspan="4" style="text-align:center;color:var(--gray-400);padding:24px">載入中...</td></tr></tbody>
+      <thead><tr><th>姓名</th><th>進度</th><th>模組狀態</th><th>答題詳情</th><th>更新</th></tr></thead>
+      <tbody id="admin-tbody"><tr><td colspan="5" style="text-align:center;color:var(--gray-400);padding:24px">載入中...</td></tr></tbody>
     </table>
   </div>
   <button onclick="loadAdminData()" style="margin-top:12px;padding:7px 16px;border:1px solid var(--gray-200);border-radius:8px;font-size:13px;cursor:pointer;background:#fff;"><i class="ti ti-refresh"></i> 重新整理</button>
@@ -606,102 +505,148 @@ li{font-size:13px;color:var(--gray-700);margin-bottom:3px;}
 </main>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-md5/0.8.3/md5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/jsSHA-minified.js"></script>
 <script>
 var MODULES = ['flow','orderinfo','orderfinish','feed','errors'];
-var MODULE_NAMES = {flow:'導購流程',orderinfo:'首次回拋',orderfinish:'請款回拋',feed:'商品資料',errors:'錯誤代碼'};
+var MODULE_NAMES = {flow:'① 導購流程',orderinfo:'② 首次回拋',orderfinish:'③ 請款回拋',feed:'④ 商品資料',errors:'⑤ 錯誤代碼'};
+var MODULE_ICONS = {flow:'📊',orderinfo:'🛒',orderfinish:'💳',feed:'📦',errors:'⚠️'};
 var currentUser = '';
 var doneModules = {};
+var quizResults = {};
 var chatHistory = [];
 var isLoading = false;
 var quizState = {};
+var currentSection = 'overview';
 
-// ── QUIZ DATA ──────────────────────────────────────────────
+// ── CONTEXT-AWARE AI QUICK QUESTIONS ─────────────────────
+var AI_QUICK = {
+  overview: [
+    {t:'整體流程是什麼？', q:'LINE 購物的整體導購流程是什麼？'},
+    {t:'兩支 API 差在哪？', q:'orderinfo 和 orderfinish 有什麼差別？'},
+    {t:'需要準備什麼？', q:'串接 LINE 購物需要準備什麼？'}
+  ],
+  flow: [
+    {t:'ecid 怎麼處理？', q:'ecid 是什麼？要怎麼記錄？'},
+    {t:'Cookie 要存多久？', q:'Cookie 的有效時間規範是什麼？'},
+    {t:'哪些情境要回拋？', q:'哪些購物情境下的訂單需要回拋？'}
+  ],
+  orderinfo: [
+    {t:'Hash 怎麼產生？', q:'orderinfo 的 hash 怎麼產生？步驟是什麼？'},
+    {t:'優惠券怎麼攤提？', q:'有優惠券時 product_amount 要怎麼計算？'},
+    {t:'哪些欄位不能更新？', q:'orderinfo 成功後哪些欄位不能再更新？'}
+  ],
+  orderfinish: [
+    {t:'和 orderinfo 差在哪？', q:'orderfinish 和 orderinfo 的主要差異是什麼？'},
+    {t:'整筆退貨怎麼做？', q:'整筆訂單退貨要怎麼處理 orderfinish？'},
+    {t:'Hash 規則不同？', q:'orderfinish 的 hash 和 orderinfo 有什麼不同？'}
+  ],
+  feed: [
+    {t:'三支 API 是什麼？', q:'商品資料 Feed 需要幾支 API？更新頻率是多少？'},
+    {t:'換圖片要注意什麼？', q:'更換商品圖片時有什麼規範？'},
+    {t:'顏色值有哪些？', q:'LINE 購物支援哪些顏色參數值？'}
+  ],
+  errors: [
+    {t:'hash 錯誤怎麼修？', q:'收到 Fail, hash is not valid 要怎麼處理？'},
+    {t:'金額加總不對怎麼辦？', q:'什麼情況會觸發 sum of product amount is not valid？'},
+    {t:'order time changed 是什麼？', q:'為什麼會收到 Fail, order time changed？'}
+  ],
+  ai: [
+    {t:'Hash 怎麼產生？', q:'hash 怎麼產生？orderinfo 和 orderfinish 有差別嗎？'},
+    {t:'優惠券如何攤提？', q:'有優惠券時 product_amount 要怎麼計算？'},
+    {t:'ecid 怎麼處理？', q:'ecid 是什麼？要怎麼記錄？'},
+    {t:'整筆退貨怎麼做？', q:'整筆訂單退貨要怎麼處理？'},
+    {t:'Data Feed 規格', q:'商品資料 Feed 需要幾支 API？'}
+  ]
+};
+
+// ── QUIZ DATA WITH EXPLANATIONS & SCENARIOS ──────────────
 var QUIZZES = {
   flow: [
     { q:'ecid 是什麼？合作夥伴應該如何處理？',
-      opts:['LINE 購物的商城代號，固定值','每次用戶通過跳轉頁產生不同的 64 碼識別碼，須記錄最新值於 Cookie','用戶手機號碼加密後的識別碼，每人只有一組','合作夥伴自訂的訂單追蹤編號'],
-      ans:1 },
+      opts:['LINE 購物的商城代號，固定值','每次跳轉頁產生不同的 64 碼識別碼，須記錄最新值於 Cookie','用戶手機號碼加密後的識別碼','合作夥伴自訂的追蹤編號'],
+      ans:1, why:'ecid 是用戶經過跳轉頁時由 LINE 購物產生的 64 碼英數混合值，每次跳轉都不同，合作夥伴須在 Cookie 中記錄最新的值。', ref:'flow' },
     { q:'Cookie 的最短有效時間需要多長？',
       opts:['6 小時','12 小時','24 小時','48 小時'],
-      ans:2 },
-    { q:'甲商品 1,000 元、乙商品 1,500 元，優惠券 300 元，回拋的甲商品金額為？',
+      ans:2, why:'文件規範 Cookie 有效時間至少 24 小時，以確保用戶在導購後有足夠時間完成購買。', ref:'flow' },
+    { q:'【情境題】消費者購買甲商品 1,000 元、乙商品 500 元 x 3 件 = 1,500 元，使用優惠券 300 元。回拋的甲商品 product_amount 應為多少？',
+      scenario:'商品總額 2,500 元，優惠券 300 元需按商品金額比例攤提。甲佔 1,000/2,500 = 40%，乙佔 1,500/2,500 = 60%。',
       opts:['700 元','880 元','1,000 元','820 元'],
-      ans:1 },
+      ans:1, why:'甲商品攤提優惠券：1,000 - 300 x (1,000/2,500) = 1,000 - 120 = 880 元。優惠券按照商品金額佔比來分攤。', ref:'flow' },
     { q:'LINE POINTS 何時發送？',
       opts:['下單後立即','orderfinish 後立即','ordertime + 30 天後','確認收貨後 7 天'],
-      ans:2 },
-    { q:'整筆訂單退貨時，orderfinish 應該如何處理？',
-      opts:['呼叫，feetotal 設為 0','呼叫，所有 product_fee 設為 0','不需要呼叫','呼叫並標記退貨'],
-      ans:2 }
+      ans:2, why:'LINE 購物 Server 收到 orderfinish 資料驗證無誤後，於訂單成立時間 (ordertime) + 30 天後陸續發送。', ref:'flow' },
+    { q:'【情境題】用戶經過導購後，先在 A 店加入購物車，2 小時後又在 B 店加入購物車，最後一次結清。哪些訂單需要回拋？',
+      opts:['只需回拋 B 店（最後結帳的）','只需回拋 A 店（先加入的）','A 店和 B 店都需要回拋','不需要回拋，因為跨店'],
+      ans:2, why:'Cookie 效期內（至少 24 小時）所有透過導購成立的訂單皆須回拋，包含跨店商品加入購物車的情境。', ref:'flow' }
   ],
   orderinfo: [
     { q:'orderinfo 中商品金額的正確欄位名稱是？',
       opts:['product_fee','product_amount','product_price','product_total'],
-      ans:1 },
+      ans:1, why:'orderinfo 用 product_amount，orderfinish 才用 product_fee。這是最常見的錯誤之一。', ref:'orderinfo' },
     { q:'hash 產生方式是？',
       opts:['直接對 authkey 做 SHA256','對 ordertime 做 MD5 得 hashkey，再用 hashkey 對特定字串做 HMAC-SHA256','對 orderid + ordertotal 做 MD5','對 orderid 做 SHA256 後與 authkey 拼接'],
-      ans:1 },
-    { q:'以下哪個欄位一旦首次 orderinfo 成功後無法更新？',
-      opts:['orderid','ordertotal','payment_method','ecid'],
-      ans:2 },
+      ans:1, why:'先用 md5(ordertime) 得到 hashkey，再用 hash_hmac(sha256, "orderid=xxx&ordertotal=xxx&timestamp=xxx", hashkey) 產生最終 hash。', ref:'orderinfo' },
+    { q:'【情境題】你第一次呼叫 orderinfo 成功，回應 OK。後來發現忘記傳 payment_method，再次呼叫想補傳。會發生什麼事？',
+      opts:['成功補傳，payment_method 會更新','會收到錯誤，付款資訊一旦成功就無法更新','會收到 OK 但 payment_method 不會被記錄','需要先取消訂單再重新回拋'],
+      ans:1, why:'文件明確規定：若第一次呼叫 orderinfo 已收到成功回應，則無法透過再次呼叫新增或更新付款/物流/用戶身份等欄位。', ref:'orderinfo' },
     { q:'ordertotal 與 product_amount 加總誤差允許範圍？',
       opts:['必須完全一致','0~5','0~10','0~100'],
-      ans:2 },
-    { q:'ordertime 的時區與格式？',
-      opts:['UTC，YYYY/MM/DD HH:MM:SS','GMT+8，YYYY-MM-DD HH24:MI:SS','Unix timestamp','ISO 8601'],
-      ans:1 }
+      ans:2, why:'ordertotal 需等於 product_amount 加總，誤差允許範圍為整數 0~10，超過就會收到 Fail 錯誤。', ref:'errors' },
+    { q:'【情境題】衛生紙 150 元/包買 2 包，肥皂 50 元/塊買 3 塊。ordertotal 和 product_amount 應該怎麼填？',
+      scenario:'衛生紙：150 x 2 = 300 元。肥皂：50 x 3 = 150 元。',
+      opts:['ordertotal=450, 衛生紙=150, 肥皂=50','ordertotal=450, 衛生紙=300, 肥皂=150','ordertotal=300, 衛生紙=300, 肥皂=150','ordertotal=450, 衛生紙=150, 肥皂=150'],
+      ans:1, why:'同品項購買多個須加總提供：衛生紙 product_amount=300，肥皂 product_amount=150，ordertotal=300+150=450。', ref:'orderinfo' }
   ],
   orderfinish: [
     { q:'orderfinish 的商品金額欄位名稱是？',
       opts:['product_amount','product_price','product_fee','product_total'],
-      ans:2 },
-    { q:'整筆訂單退貨時，合作夥伴應該如何處理？',
-      opts:['呼叫 orderfinish，feetotal 設 0','呼叫 orderfinish，product_fee 全設 0','不需要呼叫 orderfinish','呼叫 orderinfo 重新回拋'],
-      ans:2 },
+      ans:2, why:'orderfinish 用 product_fee，orderinfo 用 product_amount。兩個 API 的金額欄位名稱故意不同，不可搞混。', ref:'orderfinish' },
+    { q:'【情境題】消費者整筆訂單（3 件商品全部）申請退貨。合作夥伴應該怎麼處理 orderfinish？',
+      opts:['呼叫 orderfinish，feetotal 設 0','呼叫 orderfinish，所有 product_fee 設 0','完全不需要呼叫 orderfinish','呼叫 orderinfo 重新回拋並標記退貨'],
+      ans:2, why:'文件規定：整筆訂單退貨，不須拋送請款訂單資料，也就是完全不需要呼叫 orderfinish API。', ref:'orderfinish' },
     { q:'orderfinish 的 hash 與 orderinfo 主要差異是？',
       opts:['完全相同','用 feetime 做 MD5，簽名字串含 feetime 與 feetotal','不需要 hash','用 authkey 直接做 SHA256'],
-      ans:1 },
-    { q:'feetime 代表什麼？',
-      opts:['呼叫 API 的當下時間','訂單成立時間','消費者確認完成且已過鑑賞期的時間','LINE 伺服器收到請求的時間'],
-      ans:2 }
+      ans:1, why:'orderinfo 用 md5(ordertime) 做 hashkey，簽名含 ordertotal。orderfinish 用 md5(feetime) 做 hashkey，簽名含 feetime 和 feetotal。', ref:'orderfinish' },
+    { q:'【情境題】原訂單有衛生紙 300 元、肥皂 150 元（3 塊 x 50 元），消費者退了 1 塊肥皂。fee_list 的 product_fee 應該怎麼填？',
+      scenario:'退 1 塊肥皂 = 50 元，剩餘 2 塊 = 100 元。衛生紙不變。',
+      opts:['衛生紙=300, 肥皂=150（不變）','衛生紙=300, 肥皂=100','衛生紙=300, 肥皂=50','不需要呼叫，因為有退貨'],
+      ans:1, why:'部分退貨時須扣除退貨品項金額：肥皂退 1 塊（50 元），剩 2 塊 = 100 元。feetotal = 300 + 100 = 400。', ref:'orderfinish' }
   ],
   feed: [
     { q:'product_partial 的更新頻率是？',
       opts:['每 15 分鐘','每 30 分鐘','每小時一次','每日一次'],
-      ans:2 },
+      ans:2, why:'product_partial 每小時更新一次，僅提供前一小時內有異動的商品資料。product_full 才是每日一次。', ref:'feed' },
     { q:'商品顏色若包含多種顏色，應如何分隔？',
-      opts:['逗號，brown,black','斜線，brown/black','空格，brown black','分號，brown;black'],
-      ans:1 },
-    { q:'cate_full 中第一層目錄的 category_value_parent 應填？',
+      opts:['逗號 brown,black','斜線 brown/black','空格 brown black','分號 brown;black'],
+      ans:1, why:'LINE 購物顏色欄位規定多色用斜線 / 區隔，如 brown/black/red。只支援 17 種定義值。', ref:'feed' },
+    { q:'cate_full 第一層目錄的 category_value_parent 應填？',
       opts:['留空','root','0','自己的 category_value'],
-      ans:2 },
-    { q:'更換商品主圖時正確做法是？',
-      opts:['直接替換檔案，網址不變','圖片網址必須和原先不同','刪除舊商品後重新新增','聯絡 LINE 購物窗口'],
-      ans:1 },
-    { q:'age_group 欄位是否必填？',
-      opts:['選填','必填','只有成人商品才填','只有 3C 商品才填'],
-      ans:1 }
+      ans:2, why:'若該目錄為第一層目錄，category_value_parent 請提供 "0"。', ref:'feed' },
+    { q:'【情境題】你更換了一個商品的主圖，但用了和原先一樣的圖片網址（只換了圖片檔案本身）。會發生什麼？',
+      opts:['圖片正常更新','圖片無法更新，因為網址和原先相同','LINE 購物會報錯','圖片會在 24 小時後自動更新'],
+      ans:1, why:'文件規定：如須更換圖片，圖片網址不可同原先的網址，否則圖片將無法更新。必須使用不同的 URL。', ref:'feed' }
   ],
   errors: [
     { q:'收到 Fail, hash is not valid 應如何處理？',
       opts:['重新申請 authkey','確認簽名字串與 hashkey 來源是否符合文件','檢查 orderid 格式','等待 IP 白名單更新'],
-      ans:1 },
+      ans:1, why:'hash 錯誤通常是簽名字串的參數順序或內容不對，或是 hashkey 來源搞混（orderinfo 用 ordertime，orderfinish 用 feetime）。', ref:'errors' },
     { q:'Fail, order time changed 代表什麼？',
       opts:['ordertime 格式錯誤','ordertime 晚於伺服器時間','ordertime 與第一次回拋不一致，不允許更改','訂單超過 30 天'],
-      ans:2 },
-    { q:'Fail, order status is not valid 的原因是？',
-      opts:['orderid 格式不符','該訂單已發點，不允許再次 orderfinish','ordertotal 為負數','shopid 不匹配'],
-      ans:1 },
-    { q:'以下哪種情況不會觸發 Fail, sum. of product amount is not valid？',
-      opts:['ordertotal=1000，加總=1008（差8）','ordertotal=500，加總=500（完全一致）','ordertotal=1000，加總=1015（差15）','ordertotal=0，加總=20（差20）'],
-      ans:1 }
+      ans:2, why:'ordertime 以第一次回拋 orderinfo 的值為準，後續呼叫（含 orderfinish）都不能更改。', ref:'errors' },
+    { q:'【情境題】你呼叫 orderfinish 時收到 Fail, order status is not valid。最可能的原因是？',
+      opts:['orderid 格式不符','該訂單已完成發點，不允許再次呼叫 orderfinish','ordertotal 為負數','feetime 格式錯誤'],
+      ans:1, why:'這個錯誤代表該訂單的 LINE POINTS 已經發送完畢，系統不允許再次呼叫 orderfinish。', ref:'errors' },
+    { q:'ordertotal=1000，product_amount 加總=1008，會觸發錯誤嗎？',
+      opts:['會，因為差了 8','不會，誤差在 0~10 範圍內','會，必須完全一致','不確定，要看商品數量'],
+      ans:1, why:'誤差允許範圍為整數 0~10，差 8 在允許範圍內，不會觸發 Fail, sum. of product amount is not valid。', ref:'errors' }
   ]
 };
 
 // ── STORAGE ───────────────────────────────────────────────
 async function saveProgress() {
   if (!currentUser) return;
-  var data = { modules: doneModules, updatedAt: new Date().toLocaleString('zh-TW') };
+  var data = { modules: doneModules, quizResults: quizResults, updatedAt: new Date().toLocaleString('zh-TW') };
   try { await window.storage.set('user:' + currentUser, JSON.stringify(data), true); } catch(e) {}
 }
 
@@ -712,19 +657,23 @@ async function loadProgress() {
     if (r && r.value) {
       var data = JSON.parse(r.value);
       doneModules = data.modules || {};
+      quizResults = data.quizResults || {};
       MODULES.forEach(function(m) { if (doneModules[m]) applyDoneUI(m); });
       updateProgressBar();
+      updateSidebar();
+      renderModuleGrid();
+      renderPathSteppers();
     }
   } catch(e) {}
 }
 
 async function loadAdminData() {
   var tbody = document.getElementById('admin-tbody');
-  tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--gray-400);padding:20px">載入中...</td></tr>';
+  tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--gray-400);padding:20px">載入中...</td></tr>';
   try {
     var keys = await window.storage.list('user:', true);
     if (!keys || !keys.keys || keys.keys.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--gray-400);padding:20px">尚無學員資料</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--gray-400);padding:20px">尚無資料</td></tr>';
       return;
     }
     var rows = '';
@@ -736,21 +685,33 @@ async function loadAdminData() {
         if (!r) continue;
         var data = JSON.parse(r.value);
         var mods = data.modules || {};
-        var doneCount = Object.keys(mods).filter(function(k){ return mods[k]; }).length;
+        var qr = data.quizResults || {};
+        var doneCount = Object.keys(mods).filter(function(k){return mods[k];}).length;
         var pct = Math.round(doneCount / MODULES.length * 100);
-        var badges = MODULES.map(function(m) {
-          var cls = mods[m] ? 'mod-badge mod-done' : 'mod-badge mod-pending';
-          return '<span class="' + cls + '">' + MODULE_NAMES[m] + '</span>';
+        var badges = MODULES.map(function(m){
+          return '<span class="mod-badge ' + (mods[m]?'mod-done':'mod-pending') + '">' + MODULE_NAMES[m] + '</span>';
         }).join('');
+        var details = '';
+        MODULES.forEach(function(m){
+          if (qr[m]) {
+            var r2 = qr[m];
+            details += '<div><strong>' + MODULE_NAMES[m] + ':</strong> 嘗試 ' + r2.attempts + ' 次';
+            if (r2.wrongQs && r2.wrongQs.length > 0) {
+              details += ' | 答錯題目: <span class="wrong-q">Q' + r2.wrongQs.join(', Q') + '</span>';
+            }
+            details += '</div>';
+          }
+        });
         rows += '<tr><td><strong>' + name + '</strong></td>'
           + '<td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden"><div style="height:100%;width:' + pct + '%;background:var(--green)"></div></div><span style="font-size:12px;color:var(--green);font-weight:600;min-width:30px">' + pct + '%</span></div></td>'
           + '<td>' + badges + '</td>'
+          + '<td><div class="admin-detail">' + (details || '-') + '</div></td>'
           + '<td style="font-size:12px;color:var(--gray-400)">' + (data.updatedAt || '-') + '</td></tr>';
       } catch(e) {}
     }
-    tbody.innerHTML = rows || '<tr><td colspan="4" style="text-align:center;color:var(--gray-400);padding:20px">尚無資料</td></tr>';
+    tbody.innerHTML = rows || '<tr><td colspan="5" style="text-align:center;color:var(--gray-400);padding:20px">尚無資料</td></tr>';
   } catch(e) {
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--gray-400);padding:20px">讀取失敗，請稍後再試</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--gray-400);padding:20px">讀取失敗</td></tr>';
   }
 }
 
@@ -762,135 +723,196 @@ function doLogin() {
   document.getElementById('user-name-display').textContent = name;
   document.getElementById('user-avatar').textContent = name.charAt(0).toUpperCase();
   document.getElementById('login-overlay').style.display = 'none';
-  // Show admin tab for manager (name contains "管理" or "admin")
   var isAdmin = name.indexOf('管理') >= 0 || name.toLowerCase().indexOf('admin') >= 0;
-  if (isAdmin) {
-    document.getElementById('admin-tab').style.display = '';
-    document.getElementById('sb-admin').style.display = '';
-  }
+  if (isAdmin) { document.getElementById('admin-tab').style.display = ''; document.getElementById('sb-admin').style.display = ''; }
   loadProgress();
-  // init AI greeting
-  appendMsg('ai', '嗨 ' + name + '！我是 LINE 購物串接助理，有任何問題都可以問我。');
+  renderModuleGrid();
+  renderPathSteppers();
+  updateAIQuickQ('overview');
+  appendMsg('ai', '嗨 ' + name + '！我是 LINE 購物串接助理。你目前看到哪個章節，我就會推薦相關的問題給你。有任何疑問都可以問我！');
 }
 
-// ── SECTION NAV ───────────────────────────────────────────
+// ── NAVIGATION ────────────────────────────────────────────
 function showSection(name, linkEl) {
-  document.querySelectorAll('.section').forEach(function(s){ s.classList.remove('active'); });
-  document.querySelectorAll('.topbar-nav a').forEach(function(a){ a.classList.remove('active'); });
-  document.querySelectorAll('.sidebar-item').forEach(function(a){ a.classList.remove('active'); });
+  if (MODULES.indexOf(name) > 0 && !isModuleUnlocked(name)) return;
+  currentSection = name;
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
+  document.querySelectorAll('.topbar-nav a').forEach(function(a){a.classList.remove('active');});
+  document.querySelectorAll('.sidebar-item').forEach(function(a){a.classList.remove('active');});
   var sec = document.getElementById('section-' + name);
   if (sec) sec.classList.add('active');
   if (linkEl) linkEl.classList.add('active');
-  document.querySelectorAll('.sidebar-item').forEach(function(item) {
+  document.querySelectorAll('.sidebar-item').forEach(function(item){
     var oc = item.getAttribute('onclick');
     if (oc && oc.indexOf("'" + name + "'") >= 0) item.classList.add('active');
   });
   if (name === 'admin') loadAdminData();
+  updateAIQuickQ(name);
+}
+
+function isModuleUnlocked(mod) {
+  var idx = MODULES.indexOf(mod);
+  if (idx <= 0) return true;
+  return !!doneModules[MODULES[idx - 1]];
+}
+
+function getNextModule(mod) {
+  var idx = MODULES.indexOf(mod);
+  if (idx < MODULES.length - 1) return MODULES[idx + 1];
+  return null;
+}
+
+// ── MODULE GRID & PATH STEPPER ────────────────────────────
+function renderModuleGrid() {
+  var grid = document.getElementById('module-grid');
+  var html = '';
+  MODULES.forEach(function(m) {
+    var unlocked = isModuleUnlocked(m);
+    var done = !!doneModules[m];
+    var cls = 'module-card' + (done ? ' done' : '') + (!unlocked ? ' locked' : '');
+    html += '<div class="' + cls + '" id="mc-' + m + '" onclick="showSection(\'' + m + '\')">'
+      + '<div class="mc-icon">' + MODULE_ICONS[m] + '</div>'
+      + '<div class="mc-title">' + MODULE_NAMES[m] + '</div>'
+      + '<div class="mc-desc">' + getModuleDesc(m) + '</div>'
+      + (done ? '<div class="mc-check" style="background:var(--green)"><i class="ti ti-check"></i></div>' :
+         (!unlocked ? '<div class="mc-lock"><i class="ti ti-lock"></i></div>' : '<div class="mc-check"><i class="ti ti-check"></i></div>'))
+      + '</div>';
+  });
+  grid.innerHTML = html;
+}
+
+function getModuleDesc(m) {
+  var descs = {flow:'ecid、Cookie、金額計算',orderinfo:'orderinfo API 欄位規範',orderfinish:'orderfinish API 與鑑賞期',feed:'product_full/partial/cate',errors:'Fail 訊息與修正方式'};
+  return descs[m] || '';
+}
+
+function renderPathSteppers() {
+  var targets = ['overview','flow','orderinfo','orderfinish','feed','errors'];
+  targets.forEach(function(t) {
+    var el = document.getElementById('path-stepper-' + t);
+    if (!el) return;
+    var html = '<div class="path-stepper">';
+    MODULES.forEach(function(m, i) {
+      var done = !!doneModules[m];
+      var isCurrent = (t === m);
+      var unlocked = isModuleUnlocked(m);
+      var cls = 'path-step' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + (!unlocked && !done ? ' locked' : '');
+      html += '<div class="' + cls + '">' + (done ? '<i class="ti ti-check" style="font-size:11px"></i> ' : '') + MODULE_NAMES[m] + '</div>';
+      if (i < MODULES.length - 1) html += '<span class="path-arrow">→</span>';
+    });
+    html += '</div>';
+    el.innerHTML = html;
+  });
+}
+
+function updateSidebar() {
+  MODULES.forEach(function(m) {
+    var sb = document.getElementById('sb-' + m);
+    if (!sb) return;
+    var unlocked = isModuleUnlocked(m);
+    var done = !!doneModules[m];
+    if (unlocked || done) sb.classList.remove('locked');
+    else sb.classList.add('locked');
+    var existing = sb.querySelector('.s-check');
+    if (done && !existing) {
+      var ic = document.createElement('i');
+      ic.className = 'ti ti-circle-check-filled s-check';
+      sb.appendChild(ic);
+    }
+  });
 }
 
 // ── FLOW DETAIL ───────────────────────────────────────────
 var flowDetails = {
   1:{title:'步驟 1：進入 LINE 購物',body:'用戶透過搜尋、分類瀏覽等管道進入 LINE 購物。'},
-  2:{title:'步驟 2：跳轉頁 (TP)',body:'用戶點擊進入合作夥伴前，先經過 LINE 購物跳轉頁約 2 秒，產生 64 碼 ecid 並附加在網址後方。'},
+  2:{title:'步驟 2：跳轉頁 (TP)',body:'用戶點擊進入合作夥伴前，先經過跳轉頁約 2 秒，產生 64 碼 ecid 並附加在網址後方。'},
   3:{title:'步驟 3：記錄 Cookie',body:'合作夥伴須在瀏覽器植入 Cookie，記錄 ecid，有效時間至少 24 小時，記錄最新 ecid。'},
   4:{title:'步驟 4：訂單成立',body:'用戶完成結帳，合作夥伴將訂單資料記錄於伺服器。'},
-  5:{title:'步驟 5：首次訂單回拋',body:'訂單成立後須立即呼叫 orderinfo API，回傳訂單資料。'},
-  6:{title:'步驟 6：AOA 通知',body:'LINE 購物收到有效的 orderinfo 後，透過官方帳號發送訂單成立通知給用戶。'},
-  7:{title:'步驟 7：請款回拋',body:'訂單過鑑賞期後呼叫 orderfinish API，作為 LINE POINTS 發送及對帳依據。'},
-  8:{title:'步驟 8：發送 POINTS',body:'ordertime + 30 天後陸續發送 LINE POINTS 給用戶。'}
+  5:{title:'步驟 5：首次訂單回拋',body:'訂單成立後須立即呼叫 orderinfo API。'},
+  6:{title:'步驟 6：AOA 通知',body:'LINE 購物收到有效 orderinfo 後，發送訂單成立通知給用戶。'},
+  7:{title:'步驟 7：請款回拋',body:'過鑑賞期後呼叫 orderfinish API。'},
+  8:{title:'步驟 8：發送 POINTS',body:'ordertime + 30 天後陸續發送 LINE POINTS。'}
 };
 function showFlowDetail(n) {
   var d = flowDetails[n];
-  var box = document.getElementById('flow-detail-box');
-  document.getElementById('flow-detail-content').innerHTML =
-    '<strong style="font-size:14px;color:var(--green-dark)">' + d.title + '</strong>' +
-    '<p style="margin-top:6px;margin-bottom:0;font-size:13px;color:var(--gray-700)">' + d.body + '</p>';
-  box.style.display = 'block';
+  document.getElementById('flow-detail-content').innerHTML = '<strong style="font-size:14px;color:var(--green-dark)">' + d.title + '</strong><p style="margin-top:6px;margin-bottom:0;font-size:13px">' + d.body + '</p>';
+  document.getElementById('flow-detail-box').style.display = 'block';
 }
 
 // ── TABS ──────────────────────────────────────────────────
 function switchTab(btn, contentId) {
-  btn.closest('.tab-row').querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.closest('.tab-row').querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
-  btn.closest('.section').querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
+  btn.closest('.section').querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active');});
   document.getElementById(contentId).classList.add('active');
+}
+
+// ── HASH CALCULATOR ───────────────────────────────────────
+function calcHash() {
+  var ot = document.getElementById('hc-ordertime').value;
+  var oid = document.getElementById('hc-orderid').value;
+  var ototal = document.getElementById('hc-ordertotal').value;
+  var ts = document.getElementById('hc-timestamp').value;
+  if (!ot || !oid || !ototal || !ts) { alert('請填寫所有欄位'); return; }
+  var hashkey = md5(ot);
+  var signStr = 'orderid=' + oid + '&ordertotal=' + ototal + '&timestamp=' + ts;
+  var shaObj = new jsSHA('SHA-256', 'TEXT', {hmacKey: {value: hashkey, format: 'TEXT'}});
+  shaObj.update(signStr);
+  var result = shaObj.getHash('HEX');
+  document.getElementById('hc-step1').innerHTML = '<strong>Step 1:</strong> md5("' + ot + '") = <code>' + hashkey + '</code>';
+  document.getElementById('hc-step2').innerHTML = '<strong>Step 2:</strong> HMAC-SHA256 簽名字串 = <code>' + signStr + '</code>';
+  document.getElementById('hc-result').textContent = 'hash = ' + result;
+  document.getElementById('hc-steps').style.display = 'block';
 }
 
 // ── PROGRESS ──────────────────────────────────────────────
 function updateProgressBar() {
-  var done = Object.keys(doneModules).filter(function(k){ return doneModules[k]; }).length;
+  var done = Object.keys(doneModules).filter(function(k){return doneModules[k];}).length;
   var pct = Math.round(done / MODULES.length * 100);
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('progress-pct').textContent = pct + '%';
 }
 
 function applyDoneUI(module) {
-  var card = document.getElementById('mc-' + module);
-  var check = document.getElementById('mcc-' + module);
-  var sb = document.getElementById('sb-' + module);
   var toggleBtn = document.getElementById('toggle-' + module);
-  if (card) card.classList.add('done');
-  if (check) check.style.background = 'var(--green)';
-  if (sb) {
-    var existing = sb.querySelector('.s-check');
-    if (!existing) {
-      var ic = document.createElement('i');
-      ic.className = 'ti ti-circle-check-filled s-check';
-      sb.appendChild(ic);
-    }
-  }
-  if (toggleBtn) {
-    toggleBtn.className = 'read-toggle done-btn';
-    toggleBtn.innerHTML = '<i class="ti ti-circle-check-filled"></i> 已完成測驗';
-    toggleBtn.disabled = true;
-  }
+  if (toggleBtn) { toggleBtn.className = 'read-toggle done-btn'; toggleBtn.innerHTML = '<i class="ti ti-circle-check-filled"></i> 已完成測驗'; toggleBtn.disabled = true; }
 }
 
 function markDone(module) {
   doneModules[module] = true;
   applyDoneUI(module);
   updateProgressBar();
+  updateSidebar();
+  renderModuleGrid();
+  renderPathSteppers();
   saveProgress();
 }
 
 // ── QUIZ ──────────────────────────────────────────────────
 function triggerQuiz(module) {
   if (doneModules[module]) return;
-  var btn = document.getElementById('toggle-' + module);
-  btn.style.display = 'none';
+  document.getElementById('toggle-' + module).style.display = 'none';
   startQuiz(module);
 }
 
 function startQuiz(module) {
   var area = document.getElementById('quiz-area-' + module);
   var qs = QUIZZES[module];
+  if (!quizResults[module]) quizResults[module] = { attempts: 0, wrongQs: [] };
   quizState[module] = { answers: new Array(qs.length).fill(null), submitted: false };
 
-  var html = '<div class="quiz-wrap">'
-    + '<div class="quiz-header">'
-    + '<i class="ti ti-pencil" style="color:#05a547;font-size:17px"></i>'
-    + '<span class="quiz-header-title">章節測驗</span>'
-    + '<span class="quiz-header-sub">' + qs.length + ' 題，全部答對才算完成</span>'
-    + '</div><div class="quiz-body">';
-
+  var html = '<div class="quiz-wrap"><div class="quiz-header"><i class="ti ti-pencil" style="color:#05a547;font-size:17px"></i><span class="quiz-header-title">章節測驗</span><span class="quiz-header-sub">' + qs.length + ' 題（含情境實戰題），全部答對才算完成</span></div><div class="quiz-body">';
   for (var qi = 0; qi < qs.length; qi++) {
     var q = qs[qi];
-    html += '<div class="quiz-q-block" id="qq-' + module + '-' + qi + '">'
-      + '<div class="quiz-q"><span class="q-num">Q' + (qi+1) + '.</span>' + q.q + '</div>'
-      + '<div class="quiz-options">';
+    html += '<div class="quiz-q-block" id="qq-' + module + '-' + qi + '"><div class="quiz-q"><span class="q-num">Q' + (qi+1) + '.</span>' + q.q;
+    if (q.scenario) html += '<span class="q-scenario">' + q.scenario + '</span>';
+    html += '</div><div class="quiz-options">';
     for (var oi = 0; oi < q.opts.length; oi++) {
-      html += '<button class="quiz-opt" onclick="selectOpt(\'' + module + '\',' + qi + ',' + oi + ')">'
-        + '<i class="ti ti-circle opt-icon" id="oi-' + module + '-' + qi + '-' + oi + '"></i>'
-        + '<span>' + q.opts[oi] + '</span></button>';
+      html += '<button class="quiz-opt" onclick="selectOpt(\'' + module + '\',' + qi + ',' + oi + ')"><i class="ti ti-circle opt-icon" id="oi-' + module + '-' + qi + '-' + oi + '"></i><span>' + q.opts[oi] + '</span></button>';
     }
     html += '</div><div class="quiz-feedback" id="qfb-' + module + '-' + qi + '"></div></div>';
   }
-
-  html += '</div><div class="quiz-footer">'
-    + '<button class="quiz-submit-btn" id="qsub-' + module + '" onclick="submitQuiz(\'' + module + '\')" disabled>送出答案</button>'
-    + '<span class="quiz-score-txt" id="qscore-' + module + '"></span>'
-    + '</div></div>';
-
+  html += '</div><div class="quiz-footer"><button class="quiz-submit-btn" id="qsub-' + module + '" onclick="submitQuiz(\'' + module + '\')" disabled>送出答案</button><span class="quiz-score-txt" id="qscore-' + module + '"></span></div></div>';
   area.innerHTML = html;
   setTimeout(function(){ area.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 100);
 }
@@ -905,8 +927,7 @@ function selectOpt(module, qi, oi) {
     if (optEl) optEl.className = 'quiz-opt' + (idx === oi ? ' selected' : '');
     if (iconEl) iconEl.className = 'ti ' + (idx === oi ? 'ti-circle-filled' : 'ti-circle') + ' opt-icon';
   }
-  var answers = quizState[module].answers;
-  var allDone = answers.every(function(a){ return a !== null; });
+  var allDone = quizState[module].answers.every(function(a){return a !== null;});
   var subBtn = document.getElementById('qsub-' + module);
   if (subBtn) subBtn.disabled = !allDone;
 }
@@ -916,35 +937,39 @@ function submitQuiz(module) {
   var qs = QUIZZES[module];
   state.submitted = true;
   var correct = 0;
+  var wrongQs = [];
 
   for (var qi = 0; qi < qs.length; qi++) {
     var q = qs[qi];
     var chosen = state.answers[qi];
     var isCorrect = chosen === q.ans;
-    if (isCorrect) correct++;
-
+    if (isCorrect) correct++; else wrongQs.push(qi + 1);
     for (var oi = 0; oi < q.opts.length; oi++) {
       var optEl = document.querySelector('#qq-' + module + '-' + qi + ' .quiz-opt:nth-child(' + (oi+1) + ')');
       var iconEl = document.getElementById('oi-' + module + '-' + qi + '-' + oi);
       if (!optEl) continue;
-      if (oi === q.ans) {
-        optEl.className = 'quiz-opt correct';
-        if (iconEl) iconEl.className = 'ti ti-circle-check-filled opt-icon';
-      } else if (oi === chosen && !isCorrect) {
-        optEl.className = 'quiz-opt wrong';
-        if (iconEl) iconEl.className = 'ti ti-circle-x opt-icon';
-      } else {
-        optEl.className = 'quiz-opt';
-        if (iconEl) iconEl.className = 'ti ti-circle opt-icon';
-      }
+      if (oi === q.ans) { optEl.className = 'quiz-opt correct'; if (iconEl) iconEl.className = 'ti ti-circle-check-filled opt-icon'; }
+      else if (oi === chosen && !isCorrect) { optEl.className = 'quiz-opt wrong'; if (iconEl) iconEl.className = 'ti ti-circle-x opt-icon'; }
+      else { optEl.className = 'quiz-opt'; if (iconEl) iconEl.className = 'ti ti-circle opt-icon'; }
     }
-
     var fb = document.getElementById('qfb-' + module + '-' + qi);
     if (fb) {
-      fb.className = 'quiz-feedback show ' + (isCorrect ? 'ok' : 'no');
-      fb.textContent = isCorrect ? '✓ 正確！' : '✗ 答錯了。正確答案是：「' + q.opts[q.ans] + '」';
+      if (isCorrect) {
+        fb.className = 'quiz-feedback show ok';
+        fb.textContent = '✓ 正確！';
+      } else {
+        fb.className = 'quiz-feedback show no';
+        fb.innerHTML = '✗ 正確答案：「' + q.opts[q.ans] + '」<br><strong>為什麼？</strong>' + q.why
+          + (q.ref ? ' <span class="fb-link" onclick="showSection(\'' + q.ref + '\')">← 回到相關章節</span>' : '');
+      }
     }
   }
+
+  quizResults[module] = quizResults[module] || { attempts: 0, wrongQs: [] };
+  quizResults[module].attempts++;
+  if (wrongQs.length > 0) quizResults[module].wrongQs = wrongQs;
+  else quizResults[module].wrongQs = [];
+  saveProgress();
 
   var passed = correct === qs.length;
   var footer = document.getElementById('qsub-' + module).parentElement;
@@ -962,17 +987,17 @@ function submitQuiz(module) {
     var area = document.getElementById('quiz-area-' + module);
     var banner = document.createElement('div');
     banner.className = 'quiz-pass-banner';
-    banner.innerHTML = '<i class="ti ti-trophy"></i><div><div class="pb-title">恭喜通過！此章節已標記為完成。</div><div class="pb-sub">繼續前往下一個章節吧。</div></div>';
+    var nextMod = getNextModule(module);
+    var nextHtml = nextMod ? '<button class="next-module-btn" onclick="showSection(\'' + nextMod + '\')"><i class="ti ti-arrow-right"></i> 前往下一章：' + MODULE_NAMES[nextMod] + '</button>' : '<div class="pb-sub" style="margin-top:4px">🎊 恭喜完成所有章節！</div>';
+    banner.innerHTML = '<i class="ti ti-trophy"></i><div><div class="pb-title">恭喜通過！</div>' + nextHtml + '</div>';
     area.appendChild(banner);
     markDone(module);
   }
 }
 
 function retryQuiz(module) {
-  var area = document.getElementById('quiz-area-' + module);
-  area.innerHTML = '';
-  var btn = document.getElementById('toggle-' + module);
-  if (btn) btn.style.display = '';
+  document.getElementById('quiz-area-' + module).innerHTML = '';
+  document.getElementById('toggle-' + module).style.display = '';
   startQuiz(module);
 }
 
@@ -984,29 +1009,32 @@ function filterErrors() {
   });
 }
 
+// ── AI QUICK QUESTIONS ────────────────────────────────────
+function updateAIQuickQ(section) {
+  var wrap = document.getElementById('ai-quick-q');
+  var qs = AI_QUICK[section] || AI_QUICK['ai'];
+  var html = '';
+  qs.forEach(function(q) {
+    html += '<button class="quick-btn" onclick="sendQuick(\'' + q.q.replace(/'/g,"\\'") + '\')">' + q.t + '</button>';
+  });
+  wrap.innerHTML = html;
+}
+
 // ── AI CHAT ───────────────────────────────────────────────
 var SYSTEM_PROMPT = [
-  '你是 LINE 購物合作夥伴串接助理，只根據以下官方技術文件內容回答問題。用繁體中文，條列式為主，欄位名稱用引號標示。超出範圍請告知聯絡 dl_tw_ec_fas@linecorp.com。',
-  '',
-  '【導購流程】ecid 為 64 碼英數，每次跳轉不同，Cookie 有效至少 24 小時記錄最新值。訂單成立後即時呼叫 orderinfo；過鑑賞期後呼叫 orderfinish；ordertime+30 天後發 POINTS。',
-  '',
-  '【訂單金額】扣除運費優惠券後金額，優惠券按比例攤提。',
-  '',
-  '【orderinfo API】POST /tracking/orderinfo。必填：site(2),shopid,authkey,ecid,timestamp,hash,orderid(a-zA-Z0-9#-_),ordertime(YYYY-MM-DD HH24:MI:SS GMT+8),ordertotal,order_list含product_name/product_type(normal或3c)/product_id/product_amount(不可寫product_fee)/sub_category1。hash=md5(ordertime)得hashkey，再hash_hmac(sha256,orderid+ordertotal+timestamp,hashkey)。選填：payment_method/third_payment/card_brand(不可0)/bank_code/card_number/delivery_method/cvs/temperature/is_new_member/is_vip/is_app/custom_tag/invoice_number/random_number。付款物流用戶資訊只能orderinfo提供，一旦成功無法更新。',
-  '',
-  '【orderfinish API】POST /tracking/orderfinish。必填：同上+feetotal+feetime+fee_list含product_fee(不可寫product_amount)。hash=md5(feetime)得hashkey，再hash_hmac(sha256,orderid+feetime+feetotal+timestamp,hashkey)。整筆退貨不須呼叫。ordertotal/product_amount誤差允許0-10。',
-  '',
-  '【Data Feed】product_full每日，product_partial每小時，cate_full每日。JSON UTF-8。IP白名單：223.26.70.247,147.92.187.35,223.26.70.11。必填：product_id/product_name/description/l_description/link/image_link/availability(in stock/preorder/discontinued)/price/product_type/product_category_value/age_group(normal/adult)。顏色17種，多色用/區隔。',
-  '',
-  '【錯誤訊息】hash is not valid=hash錯誤；order time changed=ordertime不可改；order status is not valid=已發點；product_type is not valid=product_type不可改；sum of product amount/fee not valid=加總誤差超10；Missing field=有空值。'
+  '你是 LINE 購物合作夥伴串接助理，只根據官方技術文件回答。用繁體中文，條列式為主，欄位名稱用引號標示。超出範圍請告知聯絡 dl_tw_ec_fas@linecorp.com。',
+  '【導購流程】ecid 64碼每次不同，Cookie至少24小時，ordertime+30天發POINTS。金額扣運費優惠券，優惠券按比例攤提。',
+  '【orderinfo】POST /tracking/orderinfo。必填：site(2),shopid,authkey,ecid,timestamp,hash,orderid,ordertime(YYYY-MM-DD HH24:MI:SS GMT+8),ordertotal,product_amount(不可寫product_fee),sub_category1。hash=md5(ordertime)+hmac_sha256(orderid+ordertotal+timestamp)。付款物流用戶資訊只能orderinfo，成功後不能更新。',
+  '【orderfinish】POST /tracking/orderfinish。必填：同上+feetotal+feetime+product_fee(不可寫product_amount)。hash=md5(feetime)+hmac_sha256(orderid+feetime+feetotal+timestamp)。整筆退貨不須呼叫。誤差0-10。',
+  '【Data Feed】product_full每日，product_partial每小時，cate_full每日。JSON UTF-8。IP：223.26.70.247,147.92.187.35,223.26.70.11。圖片換URL才能更新。顏色17種用/區隔。',
+  '【錯誤】hash is not valid=hash錯；order time changed=不可改；order status is not valid=已發點；sum not valid=誤差超10；Missing field=有空值。'
 ].join('\n');
 
 async function sendMessage() {
   var input = document.getElementById('chat-input');
   var text = input.value.trim();
   if (!text || isLoading) return;
-  input.value = '';
-  input.style.height = 'auto';
+  input.value = ''; input.style.height = 'auto';
   appendMsg('user', text);
   chatHistory.push({role:'user', content: text});
   await callClaude();
@@ -1018,14 +1046,8 @@ function sendQuick(text) {
   showSection('ai');
 }
 
-function handleKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
-}
-
-function autoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 110) + 'px';
-}
+function handleKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
+function autoResize(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 110) + 'px'; }
 
 function appendMsg(role, text) {
   var container = document.getElementById('chat-messages');
@@ -1035,7 +1057,6 @@ function appendMsg(role, text) {
   div.innerHTML = '<div class="msg-avatar"><i class="ti ' + icon + '"></i></div><div class="msg-bubble">' + formatMsg(text) + '</div>';
   container.appendChild(div);
   container.scrollTop = container.scrollHeight;
-  return div;
 }
 
 function formatMsg(text) {
@@ -1061,22 +1082,19 @@ async function callClaude() {
       body: JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:SYSTEM_PROMPT,messages:chatHistory})
     });
     var data = await resp.json();
-    var reply = (data.content && data.content[0] && data.content[0].text) || '抱歉，無法取得回應。';
+    var reply = (data.content && data.content[0] && data.content[0].text) || ('錯誤：' + JSON.stringify(data.error || data));
     typingDiv.remove();
     appendMsg('ai', reply);
     chatHistory.push({role:'assistant', content: reply});
   } catch(e) {
     typingDiv.remove();
-    appendMsg('ai', '連線錯誤，請稍後再試。');
+    appendMsg('ai', '連線錯誤：' + e.message);
   }
   isLoading = false;
   document.getElementById('chat-send-btn').disabled = false;
 }
 
-// ── INIT ──────────────────────────────────────────────────
-document.getElementById('login-name').addEventListener('keydown', function(e){
-  if (e.key === 'Enter') doLogin();
-});
+document.getElementById('login-name').addEventListener('keydown', function(e){ if (e.key === 'Enter') doLogin(); });
 </script>
 </body>
 </html>
