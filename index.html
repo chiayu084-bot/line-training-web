@@ -1054,7 +1054,7 @@ async function callClaude() {
   container.appendChild(typingDiv);
   container.scrollTop = container.scrollHeight;
   try {
-    var PROXY_URL = 'https://app.netlify.com/projects/monumental-churros-adc2d2';
+    var PROXY_URL = 'https://monumental-churros-adc2d2.netlify.app/.netlify/functions/claude';
     var resp = await fetch(PROXY_URL, {
       method:'POST',
       headers:{'Content-Type':'application/json'},
